@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "together-cb",
+    "staging": "together-op"
+  }
+}
