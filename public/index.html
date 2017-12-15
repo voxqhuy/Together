@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--     <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="631052340251-8121tqgj1qmee3mkjs3fpec1vojir2hj.apps.googleusercontent.com"> -->
     <title>Welcome to Firebase Hosting</title>
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="/__/firebase/4.8.0/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   
   </head>
   <body>
@@ -23,11 +26,16 @@
         <div class="content">
           <input id="email-input" type="email" name="user-email" placeholder="Email">
           <input id="password-input" type="password" name="user-password" placeholder="Password">
+          <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+          <button id = "btn-google-login">Google Signin</button>
           <button id="btn-login" class="btn btn-action">
             Login
           </button>
           <button id="btn-signup" class="btn btn-secondary">
             Sign Up
+          </button>
+          <button id="btn-logout" class="btn btn-action">
+            Login
           </button>
       </div> 
         <aside class="side">Sidebar</aside>

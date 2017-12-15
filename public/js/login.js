@@ -16,6 +16,8 @@ $(document).ready(function() {
 	const passwordInput = document.getElementById('password-input');
 	const btnLogin = document.getElementById('btn-login');
 	const btnSignup = document.getElementById('btn-signup');
+	const btnLogout = document.getElementById('btn-logout');
+	const btnGoogleLogin = document.getElementById('btn-google-login');
 
 	// Add login event
 	btnLogin.addEventListener('click', e => {
@@ -27,7 +29,7 @@ $(document).ready(function() {
 		// Sign in
 		const promise = auth.signInWithEmailAndPassword(email, pass);
 		promise
-			.catch(e => console.log(e.message));
+		.catch(e => console.log(e.message));
 	});
 
 	// Add signup event
@@ -40,12 +42,12 @@ $(document).ready(function() {
 		// Sign in 
 		const promise = auth.createUserWithEmailAndPassword(email, pass);
 		promise
-			.catch(e => console.log(e.message));
+		.catch(e => console.log(e.message));
 	});
 
-	// // btnLogout.addEventListener('click', e => {
-	// // 	firebase.auth().signOut();
-	// // });
+	btnLogout.addEventListener('click', e => {
+		firebase.auth().signOut();
+	});
 
 	// Add a realtime listener
 	firebase.auth().onAuthStateChanged(firebaseUser => {
@@ -56,6 +58,47 @@ $(document).ready(function() {
 			console.log('not logged in');
 		}
 	});
+
+	var provider = new firebase.auth.GoogleAuthProvider();
+	// View user contacts
+	provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+
+	btnGoogleLogin.addEventListener('click', e => {
+		firebase.auth().signInWithPopup(provider).then(function(result) {
+	  // This gives you a Google Access Token. You can use it to access the Google API.
+	  	var token = result.credential.accessToken;
+		// The signed-in user info.
+		var user = result.user;
+		// ...
+	}).catch(function(error) {
+		// Handle Errors here.
+		var errorCode = error.code;
+		var errorMessage = error.message;
+		// The email of the user's account used.
+		var email = error.email;
+		// The firebase.auth.AuthCredential type that was used.
+		var credential = error.credential;
+		// ...
+	});
+}) 
+	// googleSignin() {
+		
+	//   // var profile = googleUser.getBasicProfile();
+	//   // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+	//   // console.log('Name: ' + profile.getName());
+	//   // console.log('Image URL: ' + profile.getImageUrl());
+	//   // console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+	// }
+
+// 	<a href="#" onclick="signOut();">Sign out</a>
+// <script>
+//   function signOut() {
+//     var auth2 = gapi.auth2.getAuthInstance();
+//     auth2.signOut().then(function () {
+//       console.log('User signed out.');
+//     });
+//   }
+// </script>
 
 });
 
