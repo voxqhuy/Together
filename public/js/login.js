@@ -62,6 +62,9 @@ $(document).ready(function() {
 	var provider = new firebase.auth.GoogleAuthProvider();
 	// View user contacts
 	provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+	provider.addScope('profile');
+ 	provider.addScope('email');
+ 	provider.addScope('https://www.googleapis.com/auth/plus.me');
 
 	btnGoogleLogin.addEventListener('click', e => {
 		firebase.auth().signInWithPopup(provider).then(function(result) {
