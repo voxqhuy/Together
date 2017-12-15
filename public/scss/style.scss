@@ -19,6 +19,7 @@ body {
       @include tabletAndBigger {
         grid-column: col-start 3 / span 8;
         grid-row: 2 / 4; 
+        display: grid;
       }
     }
     .side {
@@ -80,4 +81,8 @@ body {
     margin-bottom: 10px; 
   }
 */
+
+@import "login";
   /*# sourceMappingURL=style.css.map */
+
+
