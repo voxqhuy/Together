@@ -60,6 +60,11 @@ body {
     margin-bottom: 10px; 
   }
 */
+nav div .login-signup-nav {
+  background-color: #333; }
+  nav div .login-signup-nav li a:active {
+    background-color: #333; }
+
 .login-view {
   height: 100vh;
   background-color: #c0deed; }
@@ -69,6 +74,7 @@ body {
   width: 30%;
   margin: auto;
   display: grid;
+  grid-row-gap: 5px;
   grid-template-rows: 2fr 2fr 1fr 2fr 2fr;
   /*	.login-signup-container {
   		display: grid;
@@ -95,7 +101,7 @@ body {
   .login-form #btn-google-login {
     display: inline-block;
     background: white;
-    color: #444;
+    color: #333;
     width: 100%;
     height: 100%;
     white-space: nowrap; }
@@ -106,18 +112,18 @@ body {
       display: inline-block;
       vertical-align: middle;
       width: 30%;
-      height: 42px;
+      height: 100%;
       background-size: contain; }
     .login-form #btn-google-login .google-text {
       display: inline-block;
       vertical-align: middle;
-      padding-left: 42px;
-      padding-right: 42px;
+      padding-left: 12px;
+      padding-right: 12px;
       font-size: 14px;
       font-weight: bold;
       /* Use the Roboto font that is loaded in the <head> */
       font-family: 'Roboto', sans-serif; }
-  .login-form .login-signup-container {
+  .login-form .login-container {
     /*		#btn-signup {
     			background-color: $light-grey;
     			&:hover {
@@ -125,15 +131,16 @@ body {
     				color: $white;
     			}
     		}*/ }
-    .login-form .login-signup-container #btn-login {
+    .login-form .login-container #btn-login {
       cursor: pointer;
       width: 100%;
       height: 100%;
       background-color: #333;
+      font-family: 'Roboto', sans-serif;
       color: #fff; }
-      .login-form .login-signup-container #btn-login:hover {
+      .login-form .login-container #btn-login:hover {
         background-color: #444; }
-    .login-form .login-signup-container button {
+    .login-form .login-container button {
       border-radius: 0px; }
   .login-form .forgotpw-signup-container div {
     float: right; }

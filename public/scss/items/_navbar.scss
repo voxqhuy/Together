@@ -1,0 +1,14 @@
+nav {	
+	div {
+		.login-signup-nav {
+			background-color: $dark-grey;
+			li {
+				a {
+					&:active {
+						background-color: $dark-grey;
+					}
+				}
+			}
+		}
+	}
+}
