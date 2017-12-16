@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
 	// body...
 	// Initialize Firebase
@@ -45,19 +47,19 @@ $(document).ready(function() {
 		.catch(e => console.log(e.message));
 	});
 
-	btnLogout.addEventListener('click', e => {
-		firebase.auth().signOut();
-	});
+	// btnLogout.addEventListener('click', e => {
+	// 	firebase.auth().signOut();
+	// });
 
-	// Add a realtime listener
-	firebase.auth().onAuthStateChanged(firebaseUser => {
-		if (firebaseUser) {
-			console.log(firebaseUser);
-		}
-		else {
-			console.log('not logged in');
-		}
-	});
+	// // Add a realtime listener
+	// firebase.auth().onAuthStateChanged(firebaseUser => {
+	// 	if (firebaseUser) {
+	// 		console.log(firebaseUser);
+	// 	}
+	// 	else {
+	// 		console.log('not logged in');
+	// 	}
+	// });
 
 	var provider = new firebase.auth.GoogleAuthProvider();
 	// View user contacts

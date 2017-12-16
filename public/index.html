@@ -7,6 +7,7 @@
   <meta name="google-signin-client_id" content="631052340251-8121tqgj1qmee3mkjs3fpec1vojir2hj.apps.googleusercontent.com"> -->
   <title>Together</title>
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <script src="/__/firebase/4.8.0/firebase.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -24,21 +25,36 @@
       </ul>
     </nav>
     <div class="content">
+      <!-- Login form -->
       <div class="login-form">
+
+        <!-- Email -->
         <input id="email-input" type="email" name="user-email" placeholder="Email">
+
+        <!-- Password -->
         <input id="password-input" type="password" name="user-password" placeholder="Password">
-        <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
-        <button id = "btn-google-login">Google Signin</button>
+
+        <!-- Forgot password and sign up  -->
+        <div class="forgotpw-signup-container">
+          <a href="login/forgot.html">Forgot password?</a>
+          <div>or
+            <a href="login/signup.html">
+              Sign Up
+            </a>
+          </div>
+        </div>
+
+        <!-- Login button  -->
         <div class="login-signup-container">
-          <button id="btn-login" class="btn btn-action">
+          <button id="btn-login" class="btn btn-action ">
             Login
           </button>
-          <button id="btn-signup" class="btn btn-secondary">
-            Sign Up
-          </button>
-<!--           <button id="btn-logout" class="btn btn-action">
-            Login
-          </button> -->
+        </div>
+
+        <!-- Google login -->
+        <div id="btn-google-login" >
+          <span class="google-icon"></span>
+          <span class="google-text">Sign in with google</span>
         </div>
       </div>
     </div> 
