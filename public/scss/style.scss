@@ -49,40 +49,6 @@ body {
   }
 }
 
-
-
-/*@media (min-width: 700px) {
-  body .main-view .main-nav {
-    grid-column: col-start / span 2;
-    grid-row: 2 / 4; 
-  }
-  body .main-view .content {
-    grid-column: col-start 3 / span 8;
-    grid-row: 2 / 4; 
-  }
-  body .main-view .side {
-    grid-column: col-start 11 / span 2;
-    grid-row: 2; 
-  }
-  body .main-view .ad {
-    grid-column: col-start 11 / span 2;
-    grid-row: 3; 
-  }
-  body .main-view .main-footer {
-    grid-column: col-start / span 12; 
-  }
-  body .main-view nav ul {
-    flex-direction: column; 
-  }*/
-
-/*  #uploader {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 50%;
-    margin-bottom: 10px; 
-  }
-*/
-
 @import "items/navbar";
 @import "login";
   /*# sourceMappingURL=style.css.map */
