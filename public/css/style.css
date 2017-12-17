@@ -127,7 +127,7 @@ nav div .login-signup-nav li a {
     width: 35%;
     grid-template-rows: 2fr 2fr 1fr 1.5fr 1.5fr; }
   .login-view .forgotpw-form {
-    height: 45%;
+    height: 28%;
     width: 35%;
     grid-template-rows: 2fr 1fr 1.5fr; }
 
