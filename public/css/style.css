@@ -82,6 +82,8 @@ nav div .login-signup-nav li a {
   color: #000; }
   nav div .login-signup-nav li a:hover {
     /*background-color: $dark-grey !important;*/ }
+nav div .nav-page-name li {
+  cursor: default; }
 
 .login-view {
   height: 100vh;
