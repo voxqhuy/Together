@@ -1,11 +1,15 @@
 nav {	
+
+	.navbar-brand {
+		padding: 0;
+	}
 	div {
 		.login-signup-nav {
-			background-color: $dark-grey;
 			li {
 				a {
-					&:active {
-						background-color: $dark-grey;
+					color: $black;
+					&:hover {
+						/*background-color: $dark-grey !important;*/
 					}
 				}
 			}

@@ -1,4 +1,50 @@
 /* color */
+.login-view .login-form, .login-view .signup-form, .login-view .forgotpw-form {
+  margin: auto;
+  display: grid;
+  grid-row-gap: 5px; }
+  .login-view .login-form input, .login-view .signup-form input, .login-view .forgotpw-form input {
+    padding-left: 12px; }
+  .login-view .login-form .account-input #btn-login, .login-view .signup-form .account-input #btn-login, .login-view .forgotpw-form .account-input #btn-login {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    font-family: 'Roboto', sans-serif;
+    color: #fff; }
+    .login-view .login-form .account-input #btn-login:hover, .login-view .signup-form .account-input #btn-login:hover, .login-view .forgotpw-form .account-input #btn-login:hover {
+      background-color: #444; }
+  .login-view .login-form .account-input button, .login-view .signup-form .account-input button, .login-view .forgotpw-form .account-input button {
+    border-radius: 0px; }
+  .login-view .login-form .account-suggestion div, .login-view .signup-form .account-suggestion div, .login-view .forgotpw-form .account-suggestion div {
+    float: right; }
+
+.login-view .login-form #btn-google-login, .login-view .signup-form #btn-google-login, .login-view .forgotpw-form #btn-google-login {
+  display: inline-block;
+  background: white;
+  color: #333;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap; }
+  .login-view .login-form #btn-google-login:hover, .login-view .signup-form #btn-google-login:hover, .login-view .forgotpw-form #btn-google-login:hover {
+    cursor: pointer; }
+  .login-view .login-form #btn-google-login .google-icon, .login-view .signup-form #btn-google-login .google-icon, .login-view .forgotpw-form #btn-google-login .google-icon {
+    background: url("../images/login/600px-Google__G__Logo.png") transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+    height: 100%;
+    background-size: contain; }
+  .login-view .login-form #btn-google-login .google-text, .login-view .signup-form #btn-google-login .google-text, .login-view .forgotpw-form #btn-google-login .google-text {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', sans-serif; }
+
 body {
   height: 100%;
   width: 100%; }
@@ -60,90 +106,30 @@ body {
     margin-bottom: 10px; 
   }
 */
-nav div .login-signup-nav {
-  background-color: #333; }
-  nav div .login-signup-nav li a:active {
-    background-color: #333; }
+nav .navbar-brand {
+  padding: 0; }
+nav div .login-signup-nav li a {
+  color: #000; }
+  nav div .login-signup-nav li a:hover {
+    /*background-color: $dark-grey !important;*/ }
 
 .login-view {
   height: 100vh;
-  background-color: #c0deed; }
-
-.login-form {
-  height: 60%;
-  width: 30%;
-  margin: auto;
-  display: grid;
-  grid-row-gap: 5px;
-  grid-template-rows: 2fr 2fr 1fr 2fr 2fr;
-  /*	.login-signup-container {
-  		display: grid;
-  		grid-template-columns: 1fr 1fr; 
-  		#btn-login {
-  			background-color: $light-grey;
-  			color: $white;
-  			&:hover {
-  				background-color: $lighter-grey;
-  				color: $black;
-  			}
-  		}
-  		#btn-signup {
-  			background-color: $light-grey;
-  			&:hover {
-  				background-color: $darker-grey;
-  				color: $white;
-  			}
-  		}
-  		button {
-  			border-radius: 0px;
-  		}
-  	}*/ }
-  .login-form #btn-google-login {
-    display: inline-block;
-    background: white;
-    color: #333;
-    width: 100%;
-    height: 100%;
-    white-space: nowrap; }
-    .login-form #btn-google-login:hover {
-      cursor: pointer; }
-    .login-form #btn-google-login .google-icon {
-      background: url("../images/login/600px-Google__G__Logo.png") transparent 5px 50% no-repeat;
-      display: inline-block;
-      vertical-align: middle;
-      width: 30%;
-      height: 100%;
-      background-size: contain; }
-    .login-form #btn-google-login .google-text {
-      display: inline-block;
-      vertical-align: middle;
-      padding-left: 12px;
-      padding-right: 12px;
-      font-size: 14px;
-      font-weight: bold;
-      /* Use the Roboto font that is loaded in the <head> */
-      font-family: 'Roboto', sans-serif; }
-  .login-form .login-container {
-    /*		#btn-signup {
-    			background-color: $light-grey;
-    			&:hover {
-    				background-color: $darker-grey;
-    				color: $white;
-    			}
-    		}*/ }
-    .login-form .login-container #btn-login {
-      cursor: pointer;
-      width: 100%;
-      height: 100%;
-      background-color: #333;
-      font-family: 'Roboto', sans-serif;
-      color: #fff; }
-      .login-form .login-container #btn-login:hover {
-        background-color: #444; }
-    .login-form .login-container button {
-      border-radius: 0px; }
-  .login-form .forgotpw-signup-container div {
-    float: right; }
+  background-image: url("../images/login/background1.jfif");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .login-view .login-form {
+    height: 45%;
+    width: 35%;
+    grid-template-rows: 2fr 2fr 1fr 1.5fr 1.5fr; }
+  .login-view .signup-form {
+    height: 45%;
+    width: 35%;
+    grid-template-rows: 2fr 2fr 1fr 1.5fr 1.5fr; }
+  .login-view .forgotpw-form {
+    height: 45%;
+    width: 35%;
+    grid-template-rows: 2fr 1fr 1.5fr; }
 
 /*# sourceMappingURL=style.css.map */
 

@@ -8,7 +8,7 @@
   <title>Together</title>
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
   <script src="/__/firebase/4.8.0/firebase.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -42,71 +42,50 @@
       </ul>
     </nav> -->
     <nav class="navbar navbar-light navbar-expand-md bg-light fixed-top justify-content-center">
-        <a href="/" class="together-icon navbar-brand d-flex w-50 mr-auto justify-content-center"><img src="images/icons/together-logo.png"></a>
+        <a href="/" class="together-icon navbar-brand d-flex w-50 mr-auto justify-content-center"><img src="../images/icons/together-logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse collapse" id="collapsingNavbar3">
             <ul class="navbar-nav mx-auto w-100 justify-content-center">
                 <li class="nav-item active">
-                    Log in
+                    Forgot your Password?
                 </li>
             </ul>
             <ul class="login-signup-nav nav navbar-nav ml-auto w-100 justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Log in</a>
+                    <a class="nav-link" href="../index.html">Log in</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login/signup.html">Sign up</a>
+                    <a class="nav-link disabled" href="#">Sign up</a>
                 </li>
             </ul>
         </div>
     </nav>
-<!--     <nav class="main-nav">
-      <ul>
-        <li><a href="">Nav 1</a></li>
-        <li><a href="">Nav 2</a></li>
-        <li><a href="">Nav 3</a></li>
-      </ul>
-    </nav> -->
     <div class="content">
       <!-- Login form -->
-      <div class="login-form">
+      <div class="forgotpw-form">
 
         <!-- Email -->
         <input id="email-input" type="email" name="user-email" placeholder="Email">
-
-        <!-- Password -->
-        <input id="password-input" type="password" name="user-password" placeholder="Password">
-
-        <!-- Forgot password and sign up  -->
         <div class="account-suggestion">
-          <a href="login/forgotpw.html">Forgot password?</a>
+          <a href="../index.html">Remember it now?</a>
           <div>or
-            <a href="login/signup.html">
-              Sign Up
+            <a href="signup.html">
+              Sign up
             </a>
           </div>
         </div>
 
-        <!-- Login button  -->
+        <!-- Reset password button  -->
         <div class="account-input">
           <button id="btn-login" class="btn btn-action ">
-            Login
+            Reset password
           </button>
-        </div>
-
-        <!-- Google login -->
-        <div id="btn-google-login" >
-          <span class="google-icon"></span>
-          <span class="google-text">Sign in with google</span>
         </div>
       </div>
     </div> 
-<!--     <aside class="side">Sidebar</aside>
-    <div class="ad">Advertising</div>
-    <footer class="main-footer">The footer</footer> -->
   </div>
-  <script type="text/javascript" src="js/login.js"></script>
+  <script type="text/javascript" src="../js/login.js"></script>
 </body>
 </html>

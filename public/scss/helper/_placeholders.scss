@@ -1,0 +1,61 @@
+%account-form {
+	margin: auto;
+	display: grid;
+	grid-row-gap: 5px;
+	input {
+		padding-left: 12px;
+	}
+
+	.account-input {
+		#btn-login {
+			cursor: pointer;
+			width: 100%;
+			height: 100%;
+			background-color: $dark-grey;
+			font-family: 'Roboto', sans-serif;
+			color: $white;
+			&:hover {
+				background-color: $lessdark-grey;
+			}
+		}
+		button {
+			border-radius: 0px;
+		}
+	}
+
+	.account-suggestion {
+		div {
+			float: right;
+		}
+	}
+}
+
+%btn-google-login {
+	display: inline-block;
+	background: white;
+	color: $dark-grey;
+	width: 100%;
+	height: 100%;
+	white-space: nowrap;
+	&:hover {
+		cursor: pointer;
+	}
+	.google-icon {
+		background: url('../images/login/600px-Google__G__Logo.png') transparent 5px 50% no-repeat;
+		display: inline-block;
+		vertical-align: middle;
+		width: 30%;
+		height: 100%;
+		background-size: contain;
+	}
+	.google-text {
+		display: inline-block;
+		vertical-align: middle;
+		padding-left: 12px;
+		padding-right: 12px;
+		font-size: 14px;
+		font-weight: bold;
+		/* Use the Roboto font that is loaded in the <head> */
+		font-family: 'Roboto', sans-serif;
+	}
+}

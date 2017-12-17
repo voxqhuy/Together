@@ -1,96 +1,39 @@
 .login-view {
 	height: 100vh;
-	background-color: $light-blue;
-}
+	background-image: url('../images/login/background1.jfif');
+	background-size: cover;
+	background-repeat: no-repeat;
+	.login-form {
+		@extend %account-form;
+		height: 45%;
+		width: 35%;
+		grid-template-rows: 2fr 2fr 1fr 1.5fr 1.5fr;
 
-.login-form {
-	height: 60%;
-	width: 30%;
-	margin: auto;
-	display: grid;
-	grid-row-gap: 5px;
-	grid-template-rows: 2fr 2fr 1fr 2fr 2fr;
-	#btn-google-login {
-		display: inline-block;
-		background: white;
-		color: $dark-grey;
-		width: 100%;
-		height: 100%;
-		white-space: nowrap;
-		&:hover {
-			cursor: pointer;
-		}
-		.google-icon {
-			background: url('../images/login/600px-Google__G__Logo.png') transparent 5px 50% no-repeat;
-			display: inline-block;
-			vertical-align: middle;
-			width: 30%;
-			height: 100%;
-			background-size: contain;
-		}
-		.google-text {
-			display: inline-block;
-			vertical-align: middle;
-			padding-left: 12px;
-			padding-right: 12px;
-			font-size: 14px;
-			font-weight: bold;
-			/* Use the Roboto font that is loaded in the <head> */
-			font-family: 'Roboto', sans-serif;
-		}
-
-	}
-
-/*	.login-signup-container {
-		display: grid;
-		grid-template-columns: 1fr 1fr; 
-		#btn-login {
-			background-color: $light-grey;
-			color: $white;
-			&:hover {
-				background-color: $lighter-grey;
-				color: $black;
-			}
-		}
-		#btn-signup {
-			background-color: $light-grey;
-			&:hover {
-				background-color: $darker-grey;
-				color: $white;
-			}
-		}
-		button {
-			border-radius: 0px;
-		}
-	}*/
-
-	.login-container {
-		#btn-login {
-			cursor: pointer;
-			width: 100%;
-			height: 100%;
-			background-color: $dark-grey;
-			font-family: 'Roboto', sans-serif;
-			color: $white;
-			&:hover {
-				background-color: $lessdark-grey;
-			}
-		}
-/*		#btn-signup {
-			background-color: $light-grey;
-			&:hover {
-				background-color: $darker-grey;
-				color: $white;
-			}
-		}*/
-		button {
-			border-radius: 0px;
+		#btn-google-login {
+			@extend %btn-google-login;
 		}
 	}
 
-	.forgotpw-signup-container {
-		div {
-			float: right;
+	.signup-form {
+		@extend %account-form;
+		height: 45%;
+		width: 35%;
+		grid-template-rows: 2fr 2fr 1fr 1.5fr 1.5fr;
+
+		#btn-google-login {
+			@extend %btn-google-login;
+		}
+	}
+
+	.forgotpw-form {
+		@extend %account-form;
+		height: 45%;
+		width: 35%;
+		grid-template-rows: 2fr 1fr 1.5fr;
+
+		#btn-google-login {
+			@extend %btn-google-login;
 		}
 	}
 }
+
