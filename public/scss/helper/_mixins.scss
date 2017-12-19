@@ -27,12 +27,3 @@
 		background-position: 0% 50%;
 	}
 }
-
-@mixin account-suggestion {
-	.account-suggestion {
-		a {
-			text-decoration: none;
-			color: orange;
-		}
-	}
-}

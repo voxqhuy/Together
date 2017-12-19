@@ -1,0 +1,63 @@
+.login-view {
+	height: 100vh;
+	/*background-image: url('../images/login/background1.jfif');*/
+	background: linear-gradient(-45deg, #7d6c9b, #816c9b, #8e6c9b, #966c9b, #9b6c94, #966c9b, #8e6c9b, #816c9b, #7d6c9b);
+	background-size: 10000% 10000%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+	color: $white;
+	/*background-size: cover;*/
+	/*background-repeat: no-repeat;*/
+	.login-form {
+		@extend %account-form;
+		height: 65%;
+		width: 35%;
+		grid-template-rows: 2fr 2fr 1fr 1.8fr 1.8fr;
+		padding-bottom: 84px;
+		#btn-google-login {
+			@extend %btn-google-login;
+		}
+		@extend %account-suggestion;
+	}
+
+	.signup-form {
+		@extend %account-form;
+		height: 65%;
+		width: 35%;
+		padding-bottom: 84px;
+		grid-template-rows: 2fr 2fr 1fr 1.5fr 1.5fr;
+
+		#btn-google-login {
+			@extend %btn-google-login;
+		}
+		@extend %account-suggestion;
+	}
+
+	.forgotpw-form {
+		@extend %account-form;
+		height: 45%;
+		width: 35%;
+		padding-bottom: 84px;
+		grid-template-rows: 2fr 1fr 1.5fr;
+
+		#btn-google-login {
+			@extend %btn-google-login;
+		}
+		@extend %account-suggestion;
+	}
+}
+
+/* changing colors background */
+@-webkit-keyframes Gradient {
+	@include gradient;
+}
+
+@-moz-keyframes Gradient {
+	@include gradient;
+}
+
+@keyframes Gradient {
+	@include gradient;
+}
+

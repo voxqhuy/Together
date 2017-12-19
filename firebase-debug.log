@@ -1,32 +1,32 @@
-[debug] [2017-12-16T03:17:14.247Z] ----------------------------------------------------------------------
-[debug] [2017-12-16T03:17:14.251Z] Command:       D:\Working\Nodejs\node.exe C:\Users\Skyz\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only functions,hosting
-[debug] [2017-12-16T03:17:14.251Z] CLI Version:   3.16.0
-[debug] [2017-12-16T03:17:14.251Z] Platform:      win32
-[debug] [2017-12-16T03:17:14.251Z] Node Version:  v9.2.0
-[debug] [2017-12-16T03:17:14.252Z] Time:          Fri Dec 15 2017 22:17:14 GMT-0500 (Eastern Standard Time)
-[debug] [2017-12-16T03:17:14.252Z] ----------------------------------------------------------------------
+[debug] [2017-12-19T04:38:36.849Z] ----------------------------------------------------------------------
+[debug] [2017-12-19T04:38:36.852Z] Command:       D:\Working\Nodejs\node.exe C:\Users\Skyz\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only functions,hosting
+[debug] [2017-12-19T04:38:36.853Z] CLI Version:   3.16.0
+[debug] [2017-12-19T04:38:36.853Z] Platform:      win32
+[debug] [2017-12-19T04:38:36.853Z] Node Version:  v9.2.0
+[debug] [2017-12-19T04:38:36.854Z] Time:          Mon Dec 18 2017 23:38:36 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-19T04:38:36.854Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2017-12-16T03:17:14.270Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2017-12-16T03:17:14.270Z] > authorizing via signed-in user
-[debug] [2017-12-16T03:17:14.274Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/together-cb  
+[debug] [2017-12-19T04:38:36.872Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-12-19T04:38:36.872Z] > authorizing via signed-in user
+[debug] [2017-12-19T04:38:36.874Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/together-cb  
   
- Fri Dec 15 2017 22:17:14 GMT-0500 (Eastern Standard Time)
-[debug] [2017-12-16T03:17:15.630Z] <<< HTTP RESPONSE 200
-[debug] [2017-12-16T03:17:15.631Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/together-cb/tokens  
+ Mon Dec 18 2017 23:38:36 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-19T04:38:37.363Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-19T04:38:37.365Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/together-cb/tokens  
   
- Fri Dec 15 2017 22:17:15 GMT-0500 (Eastern Standard Time)
-[debug] [2017-12-16T03:17:16.213Z] <<< HTTP RESPONSE 200
+ Mon Dec 18 2017 23:38:37 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-19T04:38:37.962Z] <<< HTTP RESPONSE 200
 [info] 
-[info] === Serving from 'D:\iRoommm\Web dev\Github copies\Together'...
+[info] === Serving from 'd:\iRoommm\Web dev\Github copies\Together'...
 [info] 
-[debug] [2017-12-16T03:17:16.230Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/together-cb  
+[debug] [2017-12-19T04:38:37.971Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/together-cb  
   
- Fri Dec 15 2017 22:17:16 GMT-0500 (Eastern Standard Time)
-[debug] [2017-12-16T03:17:16.675Z] <<< HTTP RESPONSE 200
-[debug] [2017-12-16T03:17:16.677Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/631052340251/clients/_:getWebAppConfig  
+ Mon Dec 18 2017 23:38:37 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-19T04:38:38.396Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-19T04:38:38.399Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/631052340251/clients/_:getWebAppConfig  
   
- Fri Dec 15 2017 22:17:16 GMT-0500 (Eastern Standard Time)
-[debug] [2017-12-16T03:17:17.042Z] <<< HTTP RESPONSE 200
+ Mon Dec 18 2017 23:38:38 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-19T04:38:38.799Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] +  hosting: Local server: http://localhost:5000
 

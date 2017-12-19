@@ -1,41 +1,32 @@
 /* color */
-.login-view .login-form, .login-view .signup-form, .login-view .forgotpw-form {
+.login-view .login-form, .login-view .signup-form, .login-view .forgotpw-form, .challenge-view .login-form, .challenge-view .signup-form, .challenge-view .forgotpw-form {
   margin: auto;
   display: grid;
   grid-row-gap: 5px; }
-  .login-view .login-form input, .login-view .signup-form input, .login-view .forgotpw-form input {
+  .login-view .login-form input, .login-view .signup-form input, .login-view .forgotpw-form input, .challenge-view .login-form input, .challenge-view .signup-form input, .challenge-view .forgotpw-form input {
     padding-left: 12px; }
-  .login-view .login-form .account-input #btn-login, .login-view .signup-form .account-input #btn-login, .login-view .forgotpw-form .account-input #btn-login {
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    background-color: #333;
-    font-family: 'Roboto', sans-serif;
-    color: #fff; }
-    .login-view .login-form .account-input #btn-login:hover, .login-view .signup-form .account-input #btn-login:hover, .login-view .forgotpw-form .account-input #btn-login:hover {
-      background-color: #444; }
-  .login-view .login-form .account-input button, .login-view .signup-form .account-input button, .login-view .forgotpw-form .account-input button {
+  .login-view .login-form .account-input button, .login-view .signup-form .account-input button, .login-view .forgotpw-form .account-input button, .challenge-view .login-form .account-input button, .challenge-view .signup-form .account-input button, .challenge-view .forgotpw-form .account-input button {
     border-radius: 0px; }
-  .login-view .login-form .account-suggestion div, .login-view .signup-form .account-suggestion div, .login-view .forgotpw-form .account-suggestion div {
+  .login-view .login-form .account-suggestion div, .login-view .signup-form .account-suggestion div, .login-view .forgotpw-form .account-suggestion div, .challenge-view .login-form .account-suggestion div, .challenge-view .signup-form .account-suggestion div, .challenge-view .forgotpw-form .account-suggestion div {
     float: right; }
 
-.login-view .login-form #btn-google-login, .login-view .signup-form #btn-google-login, .login-view .forgotpw-form #btn-google-login {
+.login-view .login-form #btn-google-login, .login-view .signup-form #btn-google-login, .login-view .forgotpw-form #btn-google-login, .challenge-view .login-form #btn-google-login, .challenge-view .signup-form #btn-google-login, .challenge-view .forgotpw-form #btn-google-login {
   display: inline-block;
   background: white;
   color: #333;
   width: 100%;
   height: 100%;
   white-space: nowrap; }
-  .login-view .login-form #btn-google-login:hover, .login-view .signup-form #btn-google-login:hover, .login-view .forgotpw-form #btn-google-login:hover {
+  .login-view .login-form #btn-google-login:hover, .login-view .signup-form #btn-google-login:hover, .login-view .forgotpw-form #btn-google-login:hover, .challenge-view .login-form #btn-google-login:hover, .challenge-view .signup-form #btn-google-login:hover, .challenge-view .forgotpw-form #btn-google-login:hover {
     cursor: pointer; }
-  .login-view .login-form #btn-google-login .google-icon, .login-view .signup-form #btn-google-login .google-icon, .login-view .forgotpw-form #btn-google-login .google-icon {
+  .login-view .login-form #btn-google-login .google-icon, .login-view .signup-form #btn-google-login .google-icon, .login-view .forgotpw-form #btn-google-login .google-icon, .challenge-view .login-form #btn-google-login .google-icon, .challenge-view .signup-form #btn-google-login .google-icon, .challenge-view .forgotpw-form #btn-google-login .google-icon {
     background: url("../images/login/600px-Google__G__Logo.png") transparent 5px 50% no-repeat;
     display: inline-block;
     vertical-align: middle;
     width: 30%;
     height: 100%;
     background-size: contain; }
-  .login-view .login-form #btn-google-login .google-text, .login-view .signup-form #btn-google-login .google-text, .login-view .forgotpw-form #btn-google-login .google-text {
+  .login-view .login-form #btn-google-login .google-text, .login-view .signup-form #btn-google-login .google-text, .login-view .forgotpw-form #btn-google-login .google-text, .challenge-view .login-form #btn-google-login .google-text, .challenge-view .signup-form #btn-google-login .google-text, .challenge-view .forgotpw-form #btn-google-login .google-text {
     display: inline-block;
     vertical-align: middle;
     padding-left: 12px;
@@ -44,6 +35,20 @@
     font-weight: bold;
     /* Use the Roboto font that is loaded in the <head> */
     font-family: 'Roboto', sans-serif; }
+
+.login-view .login-form .account-suggestion a, .login-view .signup-form .account-suggestion a, .login-view .forgotpw-form .account-suggestion a, .challenge-view .login-form .account-suggestion a, .challenge-view .signup-form .account-suggestion a, .challenge-view .forgotpw-form .account-suggestion a {
+  text-decoration: none;
+  color: #ffc107; }
+
+.login-view .login-form .account-input #btn-login, .login-view .signup-form .account-input #btn-login, .login-view .forgotpw-form .account-input #btn-login, .challenge-view .login-form .account-input #btn-login, .challenge-view .signup-form .account-input #btn-login, .challenge-view .forgotpw-form .account-input #btn-login, .login-view .login-form .account-input #btn-signup, .login-view .signup-form .account-input #btn-signup, .login-view .forgotpw-form .account-input #btn-signup, .challenge-view .login-form .account-input #btn-signup, .challenge-view .signup-form .account-input #btn-signup, .challenge-view .forgotpw-form .account-input #btn-signup, .login-view .login-form .account-input #btn-forgotpw, .login-view .signup-form .account-input #btn-forgotpw, .login-view .forgotpw-form .account-input #btn-forgotpw, .challenge-view .login-form .account-input #btn-forgotpw, .challenge-view .signup-form .account-input #btn-forgotpw, .challenge-view .forgotpw-form .account-input #btn-forgotpw {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  font-family: 'Roboto', sans-serif;
+  color: #fff; }
+  .login-view .login-form .account-input #btn-login:hover, .login-view .signup-form .account-input #btn-login:hover, .login-view .forgotpw-form .account-input #btn-login:hover, .challenge-view .login-form .account-input #btn-login:hover, .challenge-view .signup-form .account-input #btn-login:hover, .challenge-view .forgotpw-form .account-input #btn-login:hover, .login-view .login-form .account-input #btn-signup:hover, .login-view .signup-form .account-input #btn-signup:hover, .login-view .forgotpw-form .account-input #btn-signup:hover, .challenge-view .login-form .account-input #btn-signup:hover, .challenge-view .signup-form .account-input #btn-signup:hover, .challenge-view .forgotpw-form .account-input #btn-signup:hover, .login-view .login-form .account-input #btn-forgotpw:hover, .login-view .signup-form .account-input #btn-forgotpw:hover, .login-view .forgotpw-form .account-input #btn-forgotpw:hover, .challenge-view .login-form .account-input #btn-forgotpw:hover, .challenge-view .signup-form .account-input #btn-forgotpw:hover, .challenge-view .forgotpw-form .account-input #btn-forgotpw:hover {
+    background-color: #444; }
 
 body {
   height: 100%;
@@ -97,6 +102,8 @@ nav {
         color: #ddd !important; }
   nav div .nav-page-name li {
     cursor: default; }
+  nav div .main-nav li:nth-child(3) {
+    border-right: 1px solid #ddd; }
 
 .login-view {
   height: 100vh;
@@ -114,25 +121,16 @@ nav {
     width: 35%;
     grid-template-rows: 2fr 2fr 1fr 1.8fr 1.8fr;
     padding-bottom: 84px; }
-    .login-view .login-form .account-suggestion a {
-      text-decoration: none;
-      color: orange; }
   .login-view .signup-form {
     height: 65%;
     width: 35%;
     padding-bottom: 84px;
     grid-template-rows: 2fr 2fr 1fr 1.5fr 1.5fr; }
-    .login-view .signup-form .account-suggestion a {
-      text-decoration: none;
-      color: orange; }
   .login-view .forgotpw-form {
     height: 45%;
     width: 35%;
     padding-bottom: 84px;
     grid-template-rows: 2fr 1fr 1.5fr; }
-    .login-view .forgotpw-form .account-suggestion a {
-      text-decoration: none;
-      color: orange; }
 
 /* changing colors background */
 @-webkit-keyframes Gradient {
@@ -156,6 +154,29 @@ nav {
     background-position: 100% 50%; }
   100% {
     background-position: 0% 50%; } }
+.challenge-view {
+  height: 100vh;
+  /*background-image: url('../images/login/background1.jfif');*/
+  background-color: #7d6c9b;
+  color: #fff;
+  /*background-size: cover;*/
+  /*background-repeat: no-repeat;*/ }
+  .challenge-view .login-form {
+    height: 65%;
+    width: 35%;
+    grid-template-rows: 2fr 2fr 1fr 1.8fr 1.8fr;
+    padding-bottom: 84px; }
+  .challenge-view .signup-form {
+    height: 65%;
+    width: 35%;
+    padding-bottom: 84px;
+    grid-template-rows: 2fr 2fr 1fr 1.5fr 1.5fr; }
+  .challenge-view .forgotpw-form {
+    height: 45%;
+    width: 35%;
+    padding-bottom: 84px;
+    grid-template-rows: 2fr 1fr 1.5fr; }
+
 /*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */

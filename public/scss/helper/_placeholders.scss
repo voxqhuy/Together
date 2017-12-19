@@ -8,15 +8,13 @@
 
 	.account-input {
 		#btn-login {
-			cursor: pointer;
-			width: 100%;
-			height: 100%;
-			background-color: $dark-grey;
-			font-family: 'Roboto', sans-serif;
-			color: $white;
-			&:hover {
-				background-color: $lessdark-grey;
-			}
+			@extend %account-btn;
+		}
+		#btn-signup {
+			@extend %account-btn;
+		}
+		#btn-forgotpw {
+			@extend %account-btn;
 		}
 		button {
 			border-radius: 0px;
@@ -57,5 +55,26 @@
 		font-weight: bold;
 		/* Use the Roboto font that is loaded in the <head> */
 		font-family: 'Roboto', sans-serif;
+	}
+}
+
+%account-suggestion {
+	.account-suggestion {
+		a {
+			text-decoration: none;
+			color: #ffc107;
+		}
+	}
+}
+
+%account-btn {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	background-color: $dark-grey;
+	font-family: 'Roboto', sans-serif;
+	color: $white;
+	&:hover {
+		background-color: $lessdark-grey;
 	}
 }

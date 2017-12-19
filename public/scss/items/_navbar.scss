@@ -30,5 +30,12 @@ nav {
 				cursor: default;
 			}
 		}
+		.main-nav {
+			li {
+				&:nth-child(3) {
+					border-right: 1px solid $lighter-grey;
+				};
+			}
+		}
 	}
 }
