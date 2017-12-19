@@ -76,33 +76,86 @@ body {
       body .main-view nav ul {
         flex-direction: column; } }
 
-nav .navbar-brand {
-  padding: 0; }
-nav div .login-signup-nav li a {
-  color: #000; }
-  nav div .login-signup-nav li a:hover {
-    /*background-color: $dark-grey !important;*/ }
-nav div .nav-page-name li {
-  cursor: default; }
+nav {
+  background: transparent; }
+  nav .navbar-brand {
+    padding: 0; }
+  nav div .login-signup-nav li {
+    padding: 10px; }
+    nav div .login-signup-nav li a {
+      width: 80px;
+      text-align: center;
+      color: #fff !important;
+      background-color: transparent;
+      border: 1px solid #eee;
+      margin: 15px; }
+      nav div .login-signup-nav li a:hover {
+        color: #000 !important;
+        background-color: #fff; }
+      nav div .login-signup-nav li a.disabled {
+        background-color: #694377;
+        color: #ddd !important; }
+  nav div .nav-page-name li {
+    cursor: default; }
 
 .login-view {
   height: 100vh;
-  background-image: url("../images/login/background1.jfif");
-  background-size: cover;
-  background-repeat: no-repeat; }
+  /*background-image: url('../images/login/background1.jfif');*/
+  background: linear-gradient(-45deg, #7d6c9b, #816c9b, #8e6c9b, #966c9b, #9b6c94, #966c9b, #8e6c9b, #816c9b, #7d6c9b);
+  background-size: 10000% 10000%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  color: #fff;
+  /*background-size: cover;*/
+  /*background-repeat: no-repeat;*/ }
   .login-view .login-form {
-    height: 45%;
+    height: 65%;
     width: 35%;
-    grid-template-rows: 2fr 2fr 1fr 1.5fr 1.5fr; }
+    grid-template-rows: 2fr 2fr 1fr 1.8fr 1.8fr;
+    padding-bottom: 84px; }
+    .login-view .login-form .account-suggestion a {
+      text-decoration: none;
+      color: orange; }
   .login-view .signup-form {
+    height: 65%;
+    width: 35%;
+    padding-bottom: 84px;
+    grid-template-rows: 2fr 2fr 1fr 1.5fr 1.5fr; }
+    .login-view .signup-form .account-suggestion a {
+      text-decoration: none;
+      color: orange; }
+  .login-view .forgotpw-form {
     height: 45%;
     width: 35%;
-    grid-template-rows: 2fr 2fr 1fr 1.5fr 1.5fr; }
-  .login-view .forgotpw-form {
-    height: 28%;
-    width: 35%;
+    padding-bottom: 84px;
     grid-template-rows: 2fr 1fr 1.5fr; }
+    .login-view .forgotpw-form .account-suggestion a {
+      text-decoration: none;
+      color: orange; }
 
+/* changing colors background */
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
 /*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */

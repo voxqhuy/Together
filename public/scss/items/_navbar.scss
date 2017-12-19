@@ -1,15 +1,26 @@
 nav {	
-
+	background: transparent;
 	.navbar-brand {
 		padding: 0;
 	}
 	div {
 		.login-signup-nav {
 			li {
+				padding: 10px;
 				a {
-					color: $black;
+					width: 80px;
+					text-align: center;
+					color: $white !important;
+					background-color: transparent;
+					border: 1px solid $off-white1;
+					margin: 15px;
 					&:hover {
-						/*background-color: $dark-grey !important;*/
+						color: $black !important;
+						background-color: $white;
+					}
+					&.disabled {
+						background-color: $dark-purple;
+						color: $lighter-grey !important;
 					}
 				}
 			}

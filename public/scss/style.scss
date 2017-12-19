@@ -9,6 +9,7 @@ body {
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
     grid-gap: 20px; 
+
     .main-nav {
       @include tabletAndBigger {
         grid-column: col-start / span 2;
