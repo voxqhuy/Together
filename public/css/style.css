@@ -104,6 +104,8 @@ nav {
     cursor: default; }
   nav div .main-nav li:nth-child(3) {
     border-right: 1px solid #ddd; }
+  nav div .welcome-nav li:nth-child(1) {
+    border-right: 1px solid #ddd; }
 
 .login-view {
   height: 100vh;
