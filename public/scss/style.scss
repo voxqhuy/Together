@@ -7,46 +7,51 @@ body {
   width: 100%; 
   .main-view {
     display: grid;
-    grid-template-columns: repeat(12, [col-start] 1fr);
-    grid-gap: 20px; 
-
+    grid-template-columns: repeat(14, [col-start] 1fr);
+    grid-template-rows: 10vh 30vh 20vh 30vh 20vh;
+    grid-gap: 2vh; 
+    nav {
+      grid-column: col-start / span 14;
+      grid-row: 1 / span 1; 
+    }
     .main-nav {
       @include tabletAndBigger {
-        grid-column: col-start / span 2;
-        grid-row: 2 / 4; 
+        grid-column: col-start 1 / span 3;
+        grid-row: 2 ; 
       }
     }
     .content {
       @include tabletAndBigger {
-        grid-column: col-start 3 / span 8;
-        grid-row: 2 / 4; 
+        grid-column: col-start 5 / span 6;
+        grid-row: 2 / 5; 
         display: grid;
       }
     }
     .side {
       @include tabletAndBigger {
-        grid-column: col-start 11 / span 2;
-        grid-row: 2; 
+        grid-column: col-start 11 / span 3;
+        grid-row: 2 / 4; 
       }
     }
     .ad {
       @include tabletAndBigger {
-        grid-column: col-start 11 / span 2;
-        grid-row: 3; 
+        grid-column: col-start 11 / span 3;
+        grid-row: 4; 
       }
     }
     .main-footer {
       @include tabletAndBigger {
-        grid-column: col-start / span 12; 
+        grid-column: col-start / span 14; 
+        grid-row: 5;
       }
     }
-    nav {
+/*    nav {
       ul {
         @include tabletAndBigger {
           flex-direction: column; 
         }
       }
-    }
+    }*/
   }
 }
 

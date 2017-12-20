@@ -1,33 +1,26 @@
-nav {	
+/*nav {	
 	background: transparent;
 	.navbar-brand {
-		padding: 0;
+		padding-left: 10%;
 	}
-	div {
-		.login-signup-nav {
-			li {
-				padding: 10px;
-				a {
-					width: 80px;
-					text-align: center;
-					color: $white !important;
-					background-color: transparent;
-					border: 1px solid $off-white1;
-					margin: 15px;
-					&:hover {
-						color: $black !important;
-						background-color: $white;
-					}
-					&.disabled {
-						background-color: $dark-purple;
-						color: $lighter-grey !important;
-					}
+	.login-signup-nav {
+		padding-right: 10%;
+		li {
+			a {
+				width: 80px;
+				text-align: center;
+				color: $white !important;
+				background-color: transparent;
+				border: 1px solid $off-white1;
+				margin: 5px;
+				&:hover {
+					color: $black !important;
+					background-color: $white;
 				}
-			}
-		}
-		.nav-page-name {
-			li {
-				cursor: default;
+				&.disabled {
+					background-color: $dark-purple;
+					color: $lighter-grey !important;
+				}
 			}
 		}
 		.main-nav {
@@ -38,10 +31,54 @@ nav {
 			}
 		}
 		.welcome-nav {
+			padding-right: 10%;
 			li {
 				&:nth-child(1) {
 					border-right: 1px solid $lighter-grey;
 				};
+			}
+		}
+	}
+}*/
+
+.account-nav {
+	display: grid;
+	grid-template-columns: 1fr 6fr 6fr 1fr;
+	grid-template-rows: auto;
+	.logo {
+		margin-top: 5%;
+		grid-column: 2;
+		background-image: url("../images/icons/together-logo-white2.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 75%;
+	}
+	.login-signup-btn {
+		grid-column: 3;
+
+		div {
+			margin-top: 5%;
+			width: 120px;
+			display: inline;
+			float: right;
+			a {
+				display:inline-block;
+			    width:90%;
+			    height:100%;
+			    text-align: center;
+				color: $white;
+				/*background-color: transparent;*/
+				border: 1px solid $off-white1;
+				padding: 8%;
+				text-decoration: none;
+				&:hover {
+					color: $black;
+					background-color: $white;
+				}
+				&.disabled {
+					background-color: $dark-purple;
+					color: $lighter-grey;
+				}
 			}
 		}
 	}

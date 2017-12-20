@@ -11,10 +11,10 @@
 	/*background-repeat: no-repeat;*/
 	.login-form {
 		@extend %account-form;
-		height: 65%;
-		width: 35%;
-		grid-template-rows: 2fr 2fr 1fr 1.8fr 1.8fr;
-		padding-bottom: 84px;
+		height: 36vh;
+		width: 50%;
+		grid-template-rows: 2fr 2fr 1fr 2fr 2fr;
+		
 		#btn-google-login {
 			@extend %btn-google-login;
 		}
@@ -23,28 +23,28 @@
 
 	.signup-form {
 		@extend %account-form;
-		height: 65%;
-		width: 35%;
-		padding-bottom: 84px;
-		grid-template-rows: 2fr 2fr 1fr 1.5fr 1.5fr;
+		height: 36vh;
+		width: 50%;
+		grid-template-rows: 2fr 2fr 1fr 2fr 2fr;
 
 		#btn-google-login {
 			@extend %btn-google-login;
 		}
 		@extend %account-suggestion;
 	}
+	.content {
+		.forgotpw-form {
+			@extend %account-form;
 
-	.forgotpw-form {
-		@extend %account-form;
-		height: 45%;
-		width: 35%;
-		padding-bottom: 84px;
-		grid-template-rows: 2fr 1fr 1.5fr;
+			height: 20vh;
+			width: 50%;
+			grid-template-rows: 2fr 1fr 2fr;
 
-		#btn-google-login {
-			@extend %btn-google-login;
+			#btn-google-login {
+				@extend %btn-google-login;
+			}
+			@extend %account-suggestion;
 		}
-		@extend %account-suggestion;
 	}
 }
 

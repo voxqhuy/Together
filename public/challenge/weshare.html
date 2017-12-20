@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Together</title>
 
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
 
   <script src="/__/firebase/4.8.0/firebase.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -17,7 +17,7 @@
 <body>
   <div class="main-view challenge-view">
     <nav class="navbar navbar-light navbar-expand-md bg-light fixed-top justify-content-center">
-        <a href="/" class="together-icon navbar-brand d-flex w-50 mr-auto justify-content-center"><img src="images/icons/together-logo-purple.png"></a>
+        <a href="/" class="together-icon navbar-brand d-flex w-25 mr-auto justify-content-center"><img src="../images/icons/together-logo-purple.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,6 +40,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="login/signup.html">I Hate This</a>
                 </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -61,6 +71,6 @@
     <div class="ad">Advertising</div>
     <footer class="main-footer">The footer</footer> -->
   </div>
-  <script type="text/javascript" src="js/login.js"></script>
+  <script type="text/javascript" src="../js/login.js"></script>
 </body>
 </html>
