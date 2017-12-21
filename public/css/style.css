@@ -1,3 +1,4 @@
+/* default text px */
 /* color */
 .login-view .login-form, .login-view .signup-form, .login-view .content .forgotpw-form, .challenge-view .login-form, .challenge-view .signup-form, .challenge-view .forgotpw-form {
   margin: auto;
@@ -135,7 +136,7 @@ body {
 .account-nav {
   display: grid;
   grid-template-columns: 1fr 6fr 6fr 1fr;
-  grid-template-rows: auto; }
+  height: 10vh; }
   .account-nav .logo {
     margin-top: 5%;
     grid-column: 2;
@@ -166,6 +167,37 @@ body {
         .account-nav .login-signup-btn div a.disabled {
           background-color: #694377;
           color: #ddd; }
+
+.welcome-nav {
+  display: grid;
+  grid-template-columns: 1fr 6fr 6fr 1fr; }
+  .welcome-nav .logo {
+    grid-column: 2;
+    background-image: url("../images/icons/together-logo-white2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    line-height: 10vh; }
+  .welcome-nav #welcome-login {
+    grid-column: 3;
+    width: 120px;
+    width: 7.5rem;
+    float: right;
+    line-height: 10vh;
+    white-space: nowrap; }
+    .welcome-nav #welcome-login a {
+      display: inline-block;
+      width: 90%;
+      height: 100%;
+      text-align: center;
+      color: #fff;
+      /*background-color: transparent;*/
+      text-decoration: none; }
+      .welcome-nav #welcome-login a:hover {
+        color: #000;
+        background-color: #fff; }
+      .welcome-nav #welcome-login a.disabled {
+        background-color: #694377;
+        color: #ddd; }
 
 .login-view {
   height: 100vh;

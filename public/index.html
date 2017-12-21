@@ -10,15 +10,15 @@
   <link rel="stylesheet" href="css/style.css" type="text/css">
 
   <script src="/__/firebase/4.8.0/firebase.js"></script>
-<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!--   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
 </head>
 <body>
   <div class="main-view challenge-view">
-    <nav class="navbar navbar-light navbar-expand-sm fixed-top bg-light">
+<!--     <nav class="navbar navbar-light navbar-expand-sm fixed-top bg-light">
         <a href="#" class="together-icon navbar-brand"><img src="images/icons/together-logo-purple.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#welcome-navbar" aria-controls="welcome-navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -33,21 +33,29 @@
               </li>
           </ul>
         </div>
+    </nav> -->
+    <nav class="welcome-nav">
+      <div></div>
+      <div class="logo"><a href="#" class="together-icon navbar-brand"></a>
+      </div>
+      <div id="welcome-login">
+        <a class="disabled" href="#">Log in</a>
+      </div>
+      <div></div>
     </nav>
     
-    <header class="main-head">The header</header>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="">Nav 1</a></li>
-                <li><a href="">Nav 2</a></li>
-                <li><a href="">Nav 3</a></li>
-            </ul>
-        </nav>
-        <article class="content"><h1>Main article area</h1>
-        <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p></article> 
-        <aside class="side">Sidebar</aside>
-        <div class="ad">Advertising</div>
-        <footer class="main-footer">The footer</footer>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="">Nav 1</a></li>
+            <li><a href="">Nav 2</a></li>
+            <li><a href="">Nav 3</a></li>
+        </ul>
+    </nav>
+    <article class="content"><h1>Main article area</h1>
+    <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p></article> 
+    <aside class="side">Sidebar</aside>
+    <div class="ad">Advertising</div>
+    <footer class="main-footer">The footer</footer>
 <!--     <aside class="side">Sidebar</aside>
     <div class="ad">Advertising</div>
     <footer class="main-footer">The footer</footer> -->

@@ -44,7 +44,7 @@
 .account-nav {
 	display: grid;
 	grid-template-columns: 1fr 6fr 6fr 1fr;
-	grid-template-rows: auto;
+	height: 10vh;
 	.logo {
 		margin-top: 5%;
 		grid-column: 2;
@@ -81,5 +81,43 @@
 				}
 			}
 		}
+	}
+}
+
+.welcome-nav {
+	display: grid;
+	grid-template-columns: 1fr 6fr 6fr 1fr;
+	
+	.logo {
+		grid-column: 2;
+		background-image: url("../images/icons/together-logo-white2.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+	
+		line-height: 10vh;
+	}
+	#welcome-login {
+		grid-column: 3;
+			@include rem('width', 120px);
+			float: right;
+			line-height: 10vh;
+  white-space: nowrap;
+			a {
+				display:inline-block;
+			    width:90%;
+			    height:100%;
+			    text-align: center;
+				color: $white;
+				/*background-color: transparent;*/
+				text-decoration: none;
+				&:hover {
+					color: $black;
+					background-color: $white;
+				}
+				&.disabled {
+					background-color: $dark-purple;
+					color: $lighter-grey;
+				}
+			}
 	}
 }
