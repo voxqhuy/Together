@@ -28,6 +28,7 @@
 	}
 }
 
+/* buttons */
 %btn-google-login {
 	display: inline-block;
 	background: white;
@@ -77,4 +78,20 @@
 	&:hover {
 		background-color: $lessdark-grey;
 	}
+}
+
+%login-nav-height {
+	margin: 4vh 0 0 0;
+	line-height: 6vh;
+	white-space: nowrap;
+}
+
+%main-nav-lineheight {
+	@extend %main-nav-height;
+	line-height: 7vh;
+	white-space: nowrap;
+}
+
+%main-nav-height {
+	height: 7vh;
 }

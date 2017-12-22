@@ -10,11 +10,12 @@ body {
     grid-template-columns: repeat(14, [col-start] 1fr);
     grid-template-rows: 10vh 30vh 20vh 30vh 20vh;
     grid-gap: 2vh; 
-    nav {
+
+    .top-nav {
       grid-column: col-start / span 14;
-      grid-row: 1 / span 1; 
+      grid-row: 1; 
     }
-    .main-nav {
+    .side-nav {
       @include tabletAndBigger {
         grid-column: col-start 1 / span 3;
         grid-row: 2 ; 

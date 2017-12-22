@@ -40,30 +40,31 @@
 		}
 	}
 }*/
-
 .account-nav {
 	display: grid;
 	grid-template-columns: 1fr 6fr 6fr 1fr;
 	height: 10vh;
 	.logo {
-		margin-top: 5%;
 		grid-column: 2;
-		background-image: url("../images/icons/together-logo-white2.png");
+		background-image: url("../images/icons/together-logo-white.png");
 		background-repeat: no-repeat;
 		background-size: contain;
-		height: 75%;
+		@extend %login-nav-height;
+		a {
+			width: 100%;
+			height: 100%;
+		}
 	}
 	.login-signup-btn {
 		grid-column: 3;
-
+		@extend %login-nav-height;
 		div {
-			margin-top: 5%;
-			width: 120px;
+			@include rem('width', 100px);
 			display: inline;
 			float: right;
 			a {
 				display:inline-block;
-			    width:90%;
+			    width:98%;
 			    height:100%;
 			    text-align: center;
 				color: $white;
@@ -84,40 +85,45 @@
 	}
 }
 
-.welcome-nav {
+.together-nav {
 	display: grid;
-	grid-template-columns: 1fr 6fr 6fr 1fr;
-	
-	.logo {
+	grid-template-columns: 1fr 12fr 1fr;
+	background-color: $white;
+	@extend %main-nav-height;
+	.center-nav {
+		
 		grid-column: 2;
-		background-image: url("../images/icons/together-logo-white2.png");
-		background-repeat: no-repeat;
-		background-size: contain;
-	
-		line-height: 10vh;
-	}
-	#welcome-login {
-		grid-column: 3;
-			@include rem('width', 120px);
-			float: right;
-			line-height: 10vh;
-  white-space: nowrap;
-			a {
-				display:inline-block;
-			    width:90%;
-			    height:100%;
+		.left-nav {
+			width: 60%;
+			display: inline-block;
+			.logo {
+				@include rem('width', 150px);
+				@extend %main-nav-lineheight;
+				background-image: url("../images/icons/together-logo-purple.png");
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+		.right-nav { 
+			width: 39%;
+			display: inline-block;
+			margin-left:auto;
+			.login-nav {
+				float: right;
 			    text-align: center;
-				color: $white;
-				/*background-color: transparent;*/
+				color: $lessdark-grey;
+				display: inline-block;
 				text-decoration: none;
+				@extend %main-nav-lineheight;
+				@include rem('width', 100px);
 				&:hover {
-					color: $black;
-					background-color: $white;
+					background-color: $lighter-grey;
 				}
-				&.disabled {
-					background-color: $dark-purple;
-					color: $lighter-grey;
+				&.enable {
+					color: $light-purple;
+					border-bottom: 2px solid $light-purple;
 				}
 			}
+		}
 	}
 }
