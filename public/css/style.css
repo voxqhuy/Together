@@ -11,38 +11,37 @@
 /* General pages' looks */
 .welcome-view {
   height: 100%;
-  background-color: #f1e6f1;
+  background-color: #f4edf4;
   color: #000; }
 
-.login-view .login-form, .login-view .signup-form, .login-view .content .forgotpw-form {
-  margin: auto;
+.login-view .login-content .login-form, .login-view .login-content .signup-form, .login-view .login-content .forgotpw-form {
   display: grid;
   grid-row-gap: 5px; }
-  .login-view .login-form input, .login-view .signup-form input, .login-view .content .forgotpw-form input {
+  .login-view .login-content .login-form input, .login-view .login-content .signup-form input, .login-view .login-content .forgotpw-form input {
     padding-left: 12px; }
-  .login-view .login-form .account-input button, .login-view .signup-form .account-input button, .login-view .content .forgotpw-form .account-input button {
+  .login-view .login-content .login-form .account-input button, .login-view .login-content .signup-form .account-input button, .login-view .login-content .forgotpw-form .account-input button {
     border-radius: 0px; }
-  .login-view .login-form .account-suggestion div, .login-view .signup-form .account-suggestion div, .login-view .content .forgotpw-form .account-suggestion div {
+  .login-view .login-content .login-form .account-suggestion div, .login-view .login-content .signup-form .account-suggestion div, .login-view .login-content .forgotpw-form .account-suggestion div {
     float: right; }
 
 /* buttons */
-.login-view .login-form #btn-google-login, .login-view .signup-form #btn-google-login, .login-view .content .forgotpw-form #btn-google-login {
+.login-view .login-content .login-form #btn-google-login, .login-view .login-content .signup-form #btn-google-login, .login-view .login-content .forgotpw-form #btn-google-login {
   display: inline-block;
   background: white;
   color: #333;
   width: 100%;
   height: 100%;
   white-space: nowrap; }
-  .login-view .login-form #btn-google-login:hover, .login-view .signup-form #btn-google-login:hover, .login-view .content .forgotpw-form #btn-google-login:hover {
+  .login-view .login-content .login-form #btn-google-login:hover, .login-view .login-content .signup-form #btn-google-login:hover, .login-view .login-content .forgotpw-form #btn-google-login:hover {
     cursor: pointer; }
-  .login-view .login-form #btn-google-login .google-icon, .login-view .signup-form #btn-google-login .google-icon, .login-view .content .forgotpw-form #btn-google-login .google-icon {
+  .login-view .login-content .login-form #btn-google-login .google-icon, .login-view .login-content .signup-form #btn-google-login .google-icon, .login-view .login-content .forgotpw-form #btn-google-login .google-icon {
     background: url("../images/login/600px-Google__G__Logo.png") transparent 5px 50% no-repeat;
     display: inline-block;
     vertical-align: middle;
     width: 30%;
     height: 100%;
     background-size: contain; }
-  .login-view .login-form #btn-google-login .google-text, .login-view .signup-form #btn-google-login .google-text, .login-view .content .forgotpw-form #btn-google-login .google-text {
+  .login-view .login-content .login-form #btn-google-login .google-text, .login-view .login-content .signup-form #btn-google-login .google-text, .login-view .login-content .forgotpw-form #btn-google-login .google-text {
     display: inline-block;
     vertical-align: middle;
     padding-left: 12px;
@@ -52,18 +51,18 @@
     /* Use the Roboto font that is loaded in the <head> */
     font-family: 'Roboto', sans-serif; }
 
-.login-view .login-form .account-suggestion a, .login-view .signup-form .account-suggestion a, .login-view .content .forgotpw-form .account-suggestion a {
+.login-view .login-content .login-form .account-suggestion a, .login-view .login-content .signup-form .account-suggestion a, .login-view .login-content .forgotpw-form .account-suggestion a {
   text-decoration: none;
   color: #ffc107; }
 
-.login-view .login-form .account-input #btn-login, .login-view .signup-form .account-input #btn-login, .login-view .content .forgotpw-form .account-input #btn-login, .login-view .login-form .account-input #btn-signup, .login-view .signup-form .account-input #btn-signup, .login-view .content .forgotpw-form .account-input #btn-signup, .login-view .login-form .account-input #btn-forgotpw, .login-view .signup-form .account-input #btn-forgotpw, .login-view .content .forgotpw-form .account-input #btn-forgotpw {
+.login-view .login-content .login-form .account-input #btn-login, .login-view .login-content .signup-form .account-input #btn-login, .login-view .login-content .forgotpw-form .account-input #btn-login, .login-view .login-content .login-form .account-input #btn-signup, .login-view .login-content .signup-form .account-input #btn-signup, .login-view .login-content .forgotpw-form .account-input #btn-signup, .login-view .login-content .login-form .account-input #btn-forgotpw, .login-view .login-content .signup-form .account-input #btn-forgotpw, .login-view .login-content .forgotpw-form .account-input #btn-forgotpw {
   cursor: pointer;
   width: 100%;
   height: 100%;
   background-color: #333;
   font-family: 'Roboto', sans-serif;
   color: #fff; }
-  .login-view .login-form .account-input #btn-login:hover, .login-view .signup-form .account-input #btn-login:hover, .login-view .content .forgotpw-form .account-input #btn-login:hover, .login-view .login-form .account-input #btn-signup:hover, .login-view .signup-form .account-input #btn-signup:hover, .login-view .content .forgotpw-form .account-input #btn-signup:hover, .login-view .login-form .account-input #btn-forgotpw:hover, .login-view .signup-form .account-input #btn-forgotpw:hover, .login-view .content .forgotpw-form .account-input #btn-forgotpw:hover {
+  .login-view .login-content .login-form .account-input #btn-login:hover, .login-view .login-content .signup-form .account-input #btn-login:hover, .login-view .login-content .forgotpw-form .account-input #btn-login:hover, .login-view .login-content .login-form .account-input #btn-signup:hover, .login-view .login-content .signup-form .account-input #btn-signup:hover, .login-view .login-content .forgotpw-form .account-input #btn-signup:hover, .login-view .login-content .login-form .account-input #btn-forgotpw:hover, .login-view .login-content .signup-form .account-input #btn-forgotpw:hover, .login-view .login-content .forgotpw-form .account-input #btn-forgotpw:hover {
     background-color: #666; }
 
 .account-nav .logo, .account-nav .login-signup-btn {
@@ -85,8 +84,38 @@ body {
   body .main-view {
     display: grid;
     grid-template-columns: repeat(14, [col-start] 1fr);
-    grid-template-rows: 10vh 30vh 20vh 30vh 20vh;
+    grid-template-rows: 10vh 1fr 10vh;
     grid-gap: 2vh;
+    /*    .side-nav {
+          @include tabletAndBigger {
+            grid-column: col-start 2 / span 3;
+            grid-row: 3 / span 3 ; 
+          }
+        }
+        .content {
+          @include tabletAndBigger {
+            grid-column: col-start 5 / span 6;
+            grid-row: 2 / 5; span 2
+          }
+        }
+        .side {
+          @include tabletAndBigger {
+            grid-column: col-start 11 / span 3;
+            grid-row: 2 / 4; 
+          }
+        }
+        .ad {
+          @include tabletAndBigger {
+            grid-column: col-start 11 / span 3;
+            grid-row: 4; 
+          }
+        }
+        .main-footer {
+          @include tabletAndBigger {
+            grid-column: col-start / span 14; 
+            grid-row: 5;
+          }
+        }*/
     /*    nav {
           ul {
             @include tabletAndBigger {
@@ -97,26 +126,18 @@ body {
     body .main-view .top-nav {
       grid-column: col-start / span 14;
       grid-row: 1; }
-    @media (min-width: 768px) {
-      body .main-view .side-nav {
-        grid-column: col-start 2 / span 3;
-        grid-row: 2; } }
-    @media (min-width: 768px) {
-      body .main-view .content {
-        grid-column: col-start 5 / span 6;
-        grid-row: 2 / 5; } }
-    @media (min-width: 768px) {
-      body .main-view .side {
-        grid-column: col-start 11 / span 3;
-        grid-row: 2 / 4; } }
-    @media (min-width: 768px) {
-      body .main-view .ad {
-        grid-column: col-start 11 / span 3;
-        grid-row: 4; } }
-    @media (min-width: 768px) {
-      body .main-view .main-footer {
-        grid-column: col-start / span 14;
-        grid-row: 5; } }
+    body .main-view .left-content {
+      grid-column: 2 / span 3;
+      grid-row: 2; }
+    body .main-view .center-content {
+      grid-column: 5 / span 6;
+      grid-row: 2; }
+    body .main-view .right-content {
+      grid-column: 11 / span 4;
+      grid-row: 2; }
+    body .main-view .main-footer {
+      grid-column: col-start / span 14;
+      grid-row: 3; }
 
 /*nav {	
 	background: transparent;
@@ -199,7 +220,8 @@ body {
 .together-nav {
   display: grid;
   grid-template-columns: 1fr 12fr 1fr;
-  background-color: #fff; }
+  background-color: #fff;
+  border-bottom: 1px solid #ddd; }
   .together-nav .center-nav {
     grid-column: 2; }
     .together-nav .center-nav .left-nav {
@@ -242,18 +264,36 @@ body {
   color: #fff;
   /*background-size: cover;*/
   /*background-repeat: no-repeat;*/ }
-  .login-view .login-form {
-    height: 36vh;
-    width: 50%;
-    grid-template-rows: 2fr 2fr 1fr 2fr 2fr; }
-  .login-view .signup-form {
-    height: 36vh;
-    width: 50%;
-    grid-template-rows: 2fr 2fr 1fr 2fr 2fr; }
-  .login-view .content .forgotpw-form {
-    height: 20vh;
-    width: 50%;
-    grid-template-rows: 2fr 1fr 2fr; }
+  .login-view .login-content {
+    height: 80vh;
+    position: relative; }
+    .login-view .login-content .login-form {
+      height: 36vh;
+      width: 50%;
+      grid-template-rows: 2fr 2fr 1fr 2fr 2fr;
+      vertical-align: middle;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -18vh 0 0 -25%; }
+    .login-view .login-content .signup-form {
+      height: 36vh;
+      width: 50%;
+      grid-template-rows: 2fr 2fr 1fr 2fr 2fr;
+      vertical-align: middle;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -18vh 0 0 -25%; }
+    .login-view .login-content .forgotpw-form {
+      height: 20vh;
+      width: 50%;
+      grid-template-rows: 2fr 1fr 2fr;
+      vertical-align: middle;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -10vh 0 0 -25%; }
 
 /* changing colors background */
 @-webkit-keyframes Gradient {
@@ -278,27 +318,25 @@ body {
   100% {
     background-position: 0% 50%; } }
 /*@import "pages/together";*/
-.welcome-view .content {
+.welcome-view .together-content {
   width: 100%; }
-  .welcome-view .content .we-share-post {
+  .welcome-view .together-content .we-share-post {
     padding: 12px;
     padding: 0.75rem;
-    background-color: #886496;
-    border-radius: 4px;
-    border-radius: 0.25rem; }
-    .welcome-view .content .we-share-post textarea {
+    background-color: #dccddc; }
+    .welcome-view .together-content .we-share-post textarea {
       width: 100%;
       resize: none;
       border: none;
       border-radius: 4px;
       border-radius: 0.25rem; }
-    .welcome-view .content .we-share-post .post-topic {
+    .welcome-view .together-content .we-share-post .post-topic {
       border-bottom: 1px solid #ddd; }
-    .welcome-view .content .we-share-post .post-controls {
+    .welcome-view .together-content .we-share-post .post-controls {
       height: 36px;
       height: 2.25rem;
       display: block; }
-      .welcome-view .content .we-share-post .post-controls .submit-post-btn {
+      .welcome-view .together-content .we-share-post .post-controls .submit-post-btn {
         display: inline-block;
         height: 100%;
         width: 96px;
@@ -312,14 +350,14 @@ body {
         cursor: pointer;
         text-align: center;
         float: right; }
-      .welcome-view .content .we-share-post .post-controls .image-upload {
+      .welcome-view .together-content .we-share-post .post-controls .image-upload {
         height: 100%;
         display: inline-block;
         width: 36px;
         width: 2.25rem; }
-        .welcome-view .content .we-share-post .post-controls .image-upload .inputfile {
+        .welcome-view .together-content .we-share-post .post-controls .image-upload .inputfile {
           display: none; }
-          .welcome-view .content .we-share-post .post-controls .image-upload .inputfile + label {
+          .welcome-view .together-content .we-share-post .post-controls .image-upload .inputfile + label {
             height: 100%;
             line-height: 36px;
             line-height: 2.25rem;
@@ -327,9 +365,13 @@ body {
             color: white;
             display: inline-block;
             cursor: pointer; }
-          .welcome-view .content .we-share-post .post-controls .image-upload .inputfile:focus + label {
+          .welcome-view .together-content .we-share-post .post-controls .image-upload .inputfile:focus + label {
             outline: 1px dotted #000;
             outline: -webkit-focus-ring-color auto 5px; }
+
+.welcome-side {
+  height: 100%;
+  background-color: white; }
 
 /*.fas {
 	.fa-rocket {

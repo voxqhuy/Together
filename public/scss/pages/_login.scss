@@ -9,37 +9,51 @@
 	color: $white;
 	/*background-size: cover;*/
 	/*background-repeat: no-repeat;*/
-	.login-form {
-		@extend %account-form;
-		height: 36vh;
-		width: 50%;
-		grid-template-rows: 2fr 2fr 1fr 2fr 2fr;
-		
-		#btn-google-login {
-			@extend %btn-google-login;
+	.login-content {
+		height: 80vh;
+		position: relative;
+		.login-form {
+			@extend %account-form;
+			height: 36vh;
+			width: 50%;
+			grid-template-rows: 2fr 2fr 1fr 2fr 2fr;
+			vertical-align: middle;
+			position: absolute;
+			top: 50%;
+    		left: 50%;
+    		margin: -18vh 0 0 -25%;
+			#btn-google-login {
+				@extend %btn-google-login;
+			}
+			@extend %account-suggestion;
 		}
-		@extend %account-suggestion;
-	}
 
-	.signup-form {
-		@extend %account-form;
-		height: 36vh;
-		width: 50%;
-		grid-template-rows: 2fr 2fr 1fr 2fr 2fr;
+		.signup-form {
+			@extend %account-form;
+			height: 36vh;
+			width: 50%;
+			grid-template-rows: 2fr 2fr 1fr 2fr 2fr;
+			vertical-align: middle;
+			position: absolute;
+			top: 50%;
+    		left: 50%;
+    		margin: -18vh 0 0 -25%;
 
-		#btn-google-login {
-			@extend %btn-google-login;
+			#btn-google-login {
+				@extend %btn-google-login;
+			}
+			@extend %account-suggestion;
 		}
-		@extend %account-suggestion;
-	}
-	.content {
 		.forgotpw-form {
 			@extend %account-form;
-
 			height: 20vh;
 			width: 50%;
 			grid-template-rows: 2fr 1fr 2fr;
-
+			vertical-align: middle;
+			position: absolute;
+			top: 50%;
+    		left: 50%;
+    		margin: -10vh 0 0 -25%;
 			#btn-google-login {
 				@extend %btn-google-login;
 			}

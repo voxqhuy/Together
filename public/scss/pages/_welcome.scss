@@ -1,11 +1,10 @@
 .welcome-view {
 	@extend %together-page;
-	.content {
+	.together-content {
 		width: 100%;
 		.we-share-post {
 			@include rem('padding', 12px);
-			background-color: $light-purple;
-			@include rem('border-radius', 4px);
+			background-color: $lighter-purple;
 
 			textarea {
 				width: 100%;
@@ -60,6 +59,11 @@
 
 		}
 	}
+}
+
+.welcome-side {
+	height: 100%;
+	background-color: white;
 }
 
 /*.fas {
