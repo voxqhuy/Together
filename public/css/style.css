@@ -1,34 +1,48 @@
 /* default text px */
 /* color */
-.login-view .login-form, .login-view .signup-form, .login-view .content .forgotpw-form, .challenge-view .login-form, .challenge-view .signup-form, .challenge-view .forgotpw-form {
+/* Animation */
+@keyframes nudge {
+  0%, 100% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(0px, 0); }
+  80% {
+    transform: translate(-10px, 0); } }
+/* General pages' looks */
+.welcome-view {
+  height: 100%;
+  background-color: #f1e6f1;
+  color: #000; }
+
+.login-view .login-form, .login-view .signup-form, .login-view .content .forgotpw-form {
   margin: auto;
   display: grid;
   grid-row-gap: 5px; }
-  .login-view .login-form input, .login-view .signup-form input, .login-view .content .forgotpw-form input, .challenge-view .login-form input, .challenge-view .signup-form input, .challenge-view .forgotpw-form input {
+  .login-view .login-form input, .login-view .signup-form input, .login-view .content .forgotpw-form input {
     padding-left: 12px; }
-  .login-view .login-form .account-input button, .login-view .signup-form .account-input button, .login-view .content .forgotpw-form .account-input button, .challenge-view .login-form .account-input button, .challenge-view .signup-form .account-input button, .challenge-view .forgotpw-form .account-input button {
+  .login-view .login-form .account-input button, .login-view .signup-form .account-input button, .login-view .content .forgotpw-form .account-input button {
     border-radius: 0px; }
-  .login-view .login-form .account-suggestion div, .login-view .signup-form .account-suggestion div, .login-view .content .forgotpw-form .account-suggestion div, .challenge-view .login-form .account-suggestion div, .challenge-view .signup-form .account-suggestion div, .challenge-view .forgotpw-form .account-suggestion div {
+  .login-view .login-form .account-suggestion div, .login-view .signup-form .account-suggestion div, .login-view .content .forgotpw-form .account-suggestion div {
     float: right; }
 
 /* buttons */
-.login-view .login-form #btn-google-login, .login-view .signup-form #btn-google-login, .login-view .content .forgotpw-form #btn-google-login, .challenge-view .login-form #btn-google-login, .challenge-view .signup-form #btn-google-login, .challenge-view .forgotpw-form #btn-google-login {
+.login-view .login-form #btn-google-login, .login-view .signup-form #btn-google-login, .login-view .content .forgotpw-form #btn-google-login {
   display: inline-block;
   background: white;
   color: #333;
   width: 100%;
   height: 100%;
   white-space: nowrap; }
-  .login-view .login-form #btn-google-login:hover, .login-view .signup-form #btn-google-login:hover, .login-view .content .forgotpw-form #btn-google-login:hover, .challenge-view .login-form #btn-google-login:hover, .challenge-view .signup-form #btn-google-login:hover, .challenge-view .forgotpw-form #btn-google-login:hover {
+  .login-view .login-form #btn-google-login:hover, .login-view .signup-form #btn-google-login:hover, .login-view .content .forgotpw-form #btn-google-login:hover {
     cursor: pointer; }
-  .login-view .login-form #btn-google-login .google-icon, .login-view .signup-form #btn-google-login .google-icon, .login-view .content .forgotpw-form #btn-google-login .google-icon, .challenge-view .login-form #btn-google-login .google-icon, .challenge-view .signup-form #btn-google-login .google-icon, .challenge-view .forgotpw-form #btn-google-login .google-icon {
+  .login-view .login-form #btn-google-login .google-icon, .login-view .signup-form #btn-google-login .google-icon, .login-view .content .forgotpw-form #btn-google-login .google-icon {
     background: url("../images/login/600px-Google__G__Logo.png") transparent 5px 50% no-repeat;
     display: inline-block;
     vertical-align: middle;
     width: 30%;
     height: 100%;
     background-size: contain; }
-  .login-view .login-form #btn-google-login .google-text, .login-view .signup-form #btn-google-login .google-text, .login-view .content .forgotpw-form #btn-google-login .google-text, .challenge-view .login-form #btn-google-login .google-text, .challenge-view .signup-form #btn-google-login .google-text, .challenge-view .forgotpw-form #btn-google-login .google-text {
+  .login-view .login-form #btn-google-login .google-text, .login-view .signup-form #btn-google-login .google-text, .login-view .content .forgotpw-form #btn-google-login .google-text {
     display: inline-block;
     vertical-align: middle;
     padding-left: 12px;
@@ -38,18 +52,18 @@
     /* Use the Roboto font that is loaded in the <head> */
     font-family: 'Roboto', sans-serif; }
 
-.login-view .login-form .account-suggestion a, .login-view .signup-form .account-suggestion a, .login-view .content .forgotpw-form .account-suggestion a, .challenge-view .login-form .account-suggestion a, .challenge-view .signup-form .account-suggestion a, .challenge-view .forgotpw-form .account-suggestion a {
+.login-view .login-form .account-suggestion a, .login-view .signup-form .account-suggestion a, .login-view .content .forgotpw-form .account-suggestion a {
   text-decoration: none;
   color: #ffc107; }
 
-.login-view .login-form .account-input #btn-login, .login-view .signup-form .account-input #btn-login, .login-view .content .forgotpw-form .account-input #btn-login, .challenge-view .login-form .account-input #btn-login, .challenge-view .signup-form .account-input #btn-login, .challenge-view .forgotpw-form .account-input #btn-login, .login-view .login-form .account-input #btn-signup, .login-view .signup-form .account-input #btn-signup, .login-view .content .forgotpw-form .account-input #btn-signup, .challenge-view .login-form .account-input #btn-signup, .challenge-view .signup-form .account-input #btn-signup, .challenge-view .forgotpw-form .account-input #btn-signup, .login-view .login-form .account-input #btn-forgotpw, .login-view .signup-form .account-input #btn-forgotpw, .login-view .content .forgotpw-form .account-input #btn-forgotpw, .challenge-view .login-form .account-input #btn-forgotpw, .challenge-view .signup-form .account-input #btn-forgotpw, .challenge-view .forgotpw-form .account-input #btn-forgotpw {
+.login-view .login-form .account-input #btn-login, .login-view .signup-form .account-input #btn-login, .login-view .content .forgotpw-form .account-input #btn-login, .login-view .login-form .account-input #btn-signup, .login-view .signup-form .account-input #btn-signup, .login-view .content .forgotpw-form .account-input #btn-signup, .login-view .login-form .account-input #btn-forgotpw, .login-view .signup-form .account-input #btn-forgotpw, .login-view .content .forgotpw-form .account-input #btn-forgotpw {
   cursor: pointer;
   width: 100%;
   height: 100%;
   background-color: #333;
   font-family: 'Roboto', sans-serif;
   color: #fff; }
-  .login-view .login-form .account-input #btn-login:hover, .login-view .signup-form .account-input #btn-login:hover, .login-view .content .forgotpw-form .account-input #btn-login:hover, .challenge-view .login-form .account-input #btn-login:hover, .challenge-view .signup-form .account-input #btn-login:hover, .challenge-view .forgotpw-form .account-input #btn-login:hover, .login-view .login-form .account-input #btn-signup:hover, .login-view .signup-form .account-input #btn-signup:hover, .login-view .content .forgotpw-form .account-input #btn-signup:hover, .challenge-view .login-form .account-input #btn-signup:hover, .challenge-view .signup-form .account-input #btn-signup:hover, .challenge-view .forgotpw-form .account-input #btn-signup:hover, .login-view .login-form .account-input #btn-forgotpw:hover, .login-view .signup-form .account-input #btn-forgotpw:hover, .login-view .content .forgotpw-form .account-input #btn-forgotpw:hover, .challenge-view .login-form .account-input #btn-forgotpw:hover, .challenge-view .signup-form .account-input #btn-forgotpw:hover, .challenge-view .forgotpw-form .account-input #btn-forgotpw:hover {
+  .login-view .login-form .account-input #btn-login:hover, .login-view .signup-form .account-input #btn-login:hover, .login-view .content .forgotpw-form .account-input #btn-login:hover, .login-view .login-form .account-input #btn-signup:hover, .login-view .signup-form .account-input #btn-signup:hover, .login-view .content .forgotpw-form .account-input #btn-signup:hover, .login-view .login-form .account-input #btn-forgotpw:hover, .login-view .signup-form .account-input #btn-forgotpw:hover, .login-view .content .forgotpw-form .account-input #btn-forgotpw:hover {
     background-color: #666; }
 
 .account-nav .logo, .account-nav .login-signup-btn {
@@ -66,7 +80,8 @@
 
 body {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif; }
   body .main-view {
     display: grid;
     grid-template-columns: repeat(14, [col-start] 1fr);
@@ -84,13 +99,12 @@ body {
       grid-row: 1; }
     @media (min-width: 768px) {
       body .main-view .side-nav {
-        grid-column: col-start 1 / span 3;
+        grid-column: col-start 2 / span 3;
         grid-row: 2; } }
     @media (min-width: 768px) {
       body .main-view .content {
         grid-column: col-start 5 / span 6;
-        grid-row: 2 / 5;
-        display: grid; } }
+        grid-row: 2 / 5; } }
     @media (min-width: 768px) {
       body .main-view .side {
         grid-column: col-start 11 / span 3;
@@ -204,13 +218,15 @@ body {
       .together-nav .center-nav .right-nav .login-nav {
         float: right;
         text-align: center;
-        color: #666;
-        display: inline-block;
+        color: #fff;
+        background-color: #694377;
         text-decoration: none;
         width: 100px;
-        width: 6.25rem; }
+        width: 6.25rem;
+        animation: nudge 5s linear infinite alternate; }
         .together-nav .center-nav .right-nav .login-nav:hover {
-          background-color: #ddd; }
+          background-color: #ffc107;
+          color: #000; }
         .together-nav .center-nav .right-nav .login-nav.enable {
           color: #886496;
           border-bottom: 2px solid #886496; }
@@ -261,29 +277,64 @@ body {
     background-position: 100% 50%; }
   100% {
     background-position: 0% 50%; } }
-.challenge-view {
-  height: 100%;
-  /*background-image: url('../images/login/background1.jfif');*/
-  background-color: #7d6c9b;
-  color: #fff;
-  /*background-size: cover;*/
-  /*background-repeat: no-repeat;*/ }
-  .challenge-view .login-form {
-    height: 65%;
-    width: 35%;
-    grid-template-rows: 2fr 2fr 1fr 1.8fr 1.8fr;
-    padding-bottom: 84px; }
-  .challenge-view .signup-form {
-    height: 65%;
-    width: 35%;
-    padding-bottom: 84px;
-    grid-template-rows: 2fr 2fr 1fr 1.5fr 1.5fr; }
-  .challenge-view .forgotpw-form {
-    height: 45%;
-    width: 35%;
-    padding-bottom: 84px;
-    grid-template-rows: 2fr 1fr 1.5fr; }
+/*@import "pages/together";*/
+.welcome-view .content {
+  width: 100%; }
+  .welcome-view .content .we-share-post {
+    padding: 12px;
+    padding: 0.75rem;
+    background-color: #886496;
+    border-radius: 4px;
+    border-radius: 0.25rem; }
+    .welcome-view .content .we-share-post textarea {
+      width: 100%;
+      resize: none;
+      border: none;
+      border-radius: 4px;
+      border-radius: 0.25rem; }
+    .welcome-view .content .we-share-post .post-topic {
+      border-bottom: 1px solid #ddd; }
+    .welcome-view .content .we-share-post .post-controls {
+      height: 36px;
+      height: 2.25rem;
+      display: block; }
+      .welcome-view .content .we-share-post .post-controls .submit-post-btn {
+        display: inline-block;
+        height: 100%;
+        width: 96px;
+        width: 6rem;
+        line-height: 36px;
+        line-height: 2.25rem;
+        border-radius: 18px;
+        border-radius: 1.125rem;
+        color: #fff;
+        background-color: #694377;
+        cursor: pointer;
+        text-align: center;
+        float: right; }
+      .welcome-view .content .we-share-post .post-controls .image-upload {
+        height: 100%;
+        display: inline-block;
+        width: 36px;
+        width: 2.25rem; }
+        .welcome-view .content .we-share-post .post-controls .image-upload .inputfile {
+          display: none; }
+          .welcome-view .content .we-share-post .post-controls .image-upload .inputfile + label {
+            height: 100%;
+            line-height: 36px;
+            line-height: 2.25rem;
+            justify-content: center;
+            color: white;
+            display: inline-block;
+            cursor: pointer; }
+          .welcome-view .content .we-share-post .post-controls .image-upload .inputfile:focus + label {
+            outline: 1px dotted #000;
+            outline: -webkit-focus-ring-color auto 5px; }
 
-/*# sourceMappingURL=style.css.map */
+/*.fas {
+	.fa-rocket {
+    	color: purple;
+    }
+}*/
 
 /*# sourceMappingURL=style.css.map */

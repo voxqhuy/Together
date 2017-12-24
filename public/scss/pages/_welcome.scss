@@ -1,0 +1,69 @@
+.welcome-view {
+	@extend %together-page;
+	.content {
+		width: 100%;
+		.we-share-post {
+			@include rem('padding', 12px);
+			background-color: $light-purple;
+			@include rem('border-radius', 4px);
+
+			textarea {
+				width: 100%;
+				resize: none;
+				border: none;
+				@include rem('border-radius', 4px);
+			}
+			.post-topic {
+				border-bottom: 1px solid $lighter-grey;
+			}
+			.post-controls {
+				@include rem('height', 36px);
+				display: block;
+				.submit-post-btn {
+					display: inline-block;
+					height: 100%;
+					@include rem('width', 96px);
+					@include rem('line-height', 36px);
+					@include rem('border-radius', 18px);
+					color: $white;
+					background-color: $dark-purple;
+					cursor: pointer;
+					text-align: center;
+					float: right;
+					
+				}
+				.image-upload {
+					height: 100%;
+					display: inline-block;
+					@include rem('width', 36px);
+					.inputfile {
+						display: none;
+						+ label {
+						    height: 100%;
+						    @include rem('line-height', 36px);
+						    justify-content: center;
+						    color: white;
+						    display: inline-block;
+						    cursor: pointer;
+						}
+						&:focus {
+							+ label {
+								outline: 1px dotted #000;
+								outline: -webkit-focus-ring-color auto 5px;
+							}
+						}
+					}
+				}
+			}
+			#attach-img-post {
+			}
+
+		}
+	}
+}
+
+/*.fas {
+	.fa-rocket {
+    	color: purple;
+    }
+}*/

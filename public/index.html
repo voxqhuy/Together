@@ -4,17 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Together</title>
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
 
+  <!-- firebase -->
   <script src="/__/firebase/4.8.0/firebase.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <!-- font awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
 </head>
 <body>
-  <div class="main-view challenge-view">
+  <div class="main-view welcome-view">
     <nav class="top-nav together-nav">
       <!-- <div></div> -->
       <div class="center-nav">
@@ -22,7 +25,7 @@
           <a href="#" class="logo together-icon navbar-brand"></a>
         </div>
         <div class="right-nav">
-          <a class="login-nav" href="login/login.html">Get Started</a>
+          <a class="login-nav" href="login/login.html">Let's go</a>
         </div>
       </div>
     </nav>
@@ -34,8 +37,21 @@
             <li><a href="">Nav 3</a></li>
         </ul>
     </nav>
-    <article class="content"><h1>Main article area</h1>
-    <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p></article> 
+    <div class="content">
+      <div class="we-share-post">
+        <textarea class="post-topic" rows="2" placeholder="What is the topic?"></textarea>
+        <textarea rows="5" placeholder="Describe the challenge here..."></textarea>
+        <div class="post-controls">
+          <div class="submit-post-btn">
+            <i class="fas fa-rocket"></i>  Launch!
+          </div>
+          <div class="image-upload">
+            <input type="file" id="attach-img-post" class="inputfile" accept="image/*" />
+            <label for="attach-img-post"><i class="fas fa-image fa-2x"></i></label>
+          </div>
+        </div>
+      </div>
+    </div> 
     <aside class="side">Sidebar</aside>
     <div class="ad">Advertising</div>
     <footer class="main-footer">The footer</footer>

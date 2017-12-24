@@ -1,11 +1,8 @@
 .challenge-view {
-	height: 100%;
-	/*background-image: url('../images/login/background1.jfif');*/
-	background-color: #7d6c9b;
-	color: $white;
+	
 	/*background-size: cover;*/
 	/*background-repeat: no-repeat;*/
-	.login-form {
+/*	.login-form {
 		@extend %account-form;
 		height: 65%;
 		width: 35%;
@@ -41,7 +38,7 @@
 			@extend %btn-google-login;
 		}
 		@extend %account-suggestion;
-	}
+	}*/
 }
 
 

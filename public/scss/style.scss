@@ -5,6 +5,7 @@
 body {
   height: 100%;
   width: 100%; 
+  font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
   .main-view {
     display: grid;
     grid-template-columns: repeat(14, [col-start] 1fr);
@@ -17,7 +18,7 @@ body {
     }
     .side-nav {
       @include tabletAndBigger {
-        grid-column: col-start 1 / span 3;
+        grid-column: col-start 2 / span 3;
         grid-row: 2 ; 
       }
     }
@@ -25,7 +26,6 @@ body {
       @include tabletAndBigger {
         grid-column: col-start 5 / span 6;
         grid-row: 2 / 5; 
-        display: grid;
       }
     }
     .side {
@@ -58,7 +58,8 @@ body {
 
 @import "items/navbar";
 @import "pages/login";
-@import "pages/challenge";
+/*@import "pages/together";*/
+@import "pages/welcome"
   /*# sourceMappingURL=style.css.map */
 
 

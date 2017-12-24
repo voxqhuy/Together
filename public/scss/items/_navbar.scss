@@ -111,13 +111,15 @@
 			.login-nav {
 				float: right;
 			    text-align: center;
-				color: $lessdark-grey;
-				display: inline-block;
+				color: $white;
+				background-color: $dark-purple;
 				text-decoration: none;
 				@extend %main-nav-lineheight;
 				@include rem('width', 100px);
+				animation: nudge 5s linear infinite alternate;
 				&:hover {
-					background-color: $lighter-grey;
+					background-color: $yellow;
+					color: $black;
 				}
 				&.enable {
 					color: $light-purple;
@@ -127,3 +129,4 @@
 		}
 	}
 }
+
