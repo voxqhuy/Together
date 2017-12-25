@@ -1,6 +1,6 @@
-/*@function pxToRem($size) {
-  $remSize: $size / 16px;
+/*px to rem conversions*/
+@function pxToRem($size) {
+  $remSize: $size / $baseline-px;
   @return #{$remSize}rem;
 }
 
-*/

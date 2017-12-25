@@ -1,6 +1,13 @@
 @import "helper/variables";
 @import "helper/mixins";
 @import "helper/placeholders";
+@import "helper/functions";
+/* Document level adjustments */
+
+
+html {
+  font-size: $baseline-px;
+}
 
 body {
   height: 100%;
@@ -25,7 +32,7 @@ body {
       grid-row: 2; 
     }
     .right-content {
-      grid-column: 11 / span 4;
+      grid-column: 11 / span 3;
       grid-row: 2; 
     }
     .main-footer {

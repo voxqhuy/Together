@@ -2,8 +2,13 @@ $tablet-width: 768px;
 $desktop-width: 1024px;
 
 /* default text px */
-$baseline-px: 16px;
-
+$baseline-px: 17px;
+@media (max-width: 900px) {
+  $baseline-px: 15px; 
+}
+@media (max-width: 400px) {
+  $baseline-px: 13px;
+}
 /* color */
 $off-white1: #eee;
 $off-white2: #e6e6e6;

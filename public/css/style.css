@@ -8,6 +8,7 @@
     transform: translate(0px, 0); }
   80% {
     transform: translate(-10px, 0); } }
+/*px to rem conversions */
 /* General pages' looks */
 .welcome-view {
   height: 100%;
@@ -77,6 +78,11 @@
 .together-nav .center-nav .left-nav .logo, .together-nav .center-nav .right-nav .login-nav, .together-nav {
   height: 7vh; }
 
+/*px to rem conversions*/
+/* Document level adjustments */
+html {
+  font-size: 17px; }
+
 body {
   height: 100%;
   width: 100%;
@@ -133,7 +139,7 @@ body {
       grid-column: 5 / span 6;
       grid-row: 2; }
     body .main-view .right-content {
-      grid-column: 11 / span 4;
+      grid-column: 11 / span 3;
       grid-row: 2; }
     body .main-view .main-footer {
       grid-column: col-start / span 14;
@@ -196,8 +202,11 @@ body {
   .account-nav .login-signup-btn {
     grid-column: 3; }
     .account-nav .login-signup-btn div {
+      /*Convert the baseline into rems*/
+      /*Print the first line in pixel values*/
       width: 100px;
-      width: 6.25rem;
+      /*If there is only one (numeric) value, return the property/value line for it.*/
+      width: 5.8823529412rem;
       display: inline;
       float: right; }
       .account-nav .login-signup-btn div a {
@@ -228,8 +237,11 @@ body {
       width: 60%;
       display: inline-block; }
       .together-nav .center-nav .left-nav .logo {
+        /*Convert the baseline into rems*/
+        /*Print the first line in pixel values*/
         width: 150px;
-        width: 9.375rem;
+        /*If there is only one (numeric) value, return the property/value line for it.*/
+        width: 8.8235294118rem;
         background-image: url("../images/icons/together-logo-purple.png");
         background-repeat: no-repeat;
         background-size: contain; }
@@ -243,8 +255,11 @@ body {
         color: #fff;
         background-color: #694377;
         text-decoration: none;
+        /*Convert the baseline into rems*/
+        /*Print the first line in pixel values*/
         width: 100px;
-        width: 6.25rem;
+        /*If there is only one (numeric) value, return the property/value line for it.*/
+        width: 5.8823529412rem;
         animation: nudge 5s linear infinite alternate; }
         .together-nav .center-nav .right-nav .login-nav:hover {
           background-color: #ffc107;
@@ -319,32 +334,51 @@ body {
     background-position: 0% 50%; } }
 /*@import "pages/together";*/
 .welcome-view .together-content {
-  width: 100%; }
+  width: 100%;
+  min-height: 100vh; }
   .welcome-view .together-content .we-share-post {
+    /*Convert the baseline into rems*/
+    /*Print the first line in pixel values*/
     padding: 12px;
-    padding: 0.75rem;
+    /*If there is only one (numeric) value, return the property/value line for it.*/
+    padding: 0.7058823529rem;
     background-color: #dccddc; }
     .welcome-view .together-content .we-share-post textarea {
       width: 100%;
       resize: none;
       border: none;
+      /*Convert the baseline into rems*/
+      /*Print the first line in pixel values*/
       border-radius: 4px;
-      border-radius: 0.25rem; }
+      /*If there is only one (numeric) value, return the property/value line for it.*/
+      border-radius: 0.2352941176rem; }
     .welcome-view .together-content .we-share-post .post-topic {
       border-bottom: 1px solid #ddd; }
     .welcome-view .together-content .we-share-post .post-controls {
+      /*Convert the baseline into rems*/
+      /*Print the first line in pixel values*/
       height: 36px;
-      height: 2.25rem;
+      /*If there is only one (numeric) value, return the property/value line for it.*/
+      height: 2.1176470588rem;
       display: block; }
       .welcome-view .together-content .we-share-post .post-controls .submit-post-btn {
         display: inline-block;
         height: 100%;
+        /*Convert the baseline into rems*/
+        /*Print the first line in pixel values*/
         width: 96px;
-        width: 6rem;
+        /*If there is only one (numeric) value, return the property/value line for it.*/
+        width: 5.6470588235rem;
+        /*Convert the baseline into rems*/
+        /*Print the first line in pixel values*/
         line-height: 36px;
-        line-height: 2.25rem;
+        /*If there is only one (numeric) value, return the property/value line for it.*/
+        line-height: 2.1176470588rem;
+        /*Convert the baseline into rems*/
+        /*Print the first line in pixel values*/
         border-radius: 18px;
-        border-radius: 1.125rem;
+        /*If there is only one (numeric) value, return the property/value line for it.*/
+        border-radius: 1.0588235294rem;
         color: #fff;
         background-color: #694377;
         cursor: pointer;
@@ -353,14 +387,20 @@ body {
       .welcome-view .together-content .we-share-post .post-controls .image-upload {
         height: 100%;
         display: inline-block;
+        /*Convert the baseline into rems*/
+        /*Print the first line in pixel values*/
         width: 36px;
-        width: 2.25rem; }
+        /*If there is only one (numeric) value, return the property/value line for it.*/
+        width: 2.1176470588rem; }
         .welcome-view .together-content .we-share-post .post-controls .image-upload .inputfile {
           display: none; }
           .welcome-view .together-content .we-share-post .post-controls .image-upload .inputfile + label {
             height: 100%;
+            /*Convert the baseline into rems*/
+            /*Print the first line in pixel values*/
             line-height: 36px;
-            line-height: 2.25rem;
+            /*If there is only one (numeric) value, return the property/value line for it.*/
+            line-height: 2.1176470588rem;
             justify-content: center;
             color: white;
             display: inline-block;
@@ -368,10 +408,36 @@ body {
           .welcome-view .together-content .we-share-post .post-controls .image-upload .inputfile:focus + label {
             outline: 1px dotted #000;
             outline: -webkit-focus-ring-color auto 5px; }
-
-.welcome-side {
-  height: 100%;
-  background-color: white; }
+.welcome-view .left-together {
+  display: grid;
+  grid-template-rows: 9.4117647059rem minmax(2.1176470588rem, 14.1176470588rem);
+  grid-gap: 2vh; }
+  .welcome-view .left-together .side-user {
+    /*Convert the baseline into rems*/
+    /*Print the first line in pixel values*/
+    height: 160px;
+    /*If there is only one (numeric) value, return the property/value line for it.*/
+    height: 9.4117647059rem;
+    /*Convert the baseline into rems*/
+    /*Print the first line in pixel values*/
+    line-height: 160px;
+    /*If there is only one (numeric) value, return the property/value line for it.*/
+    line-height: 9.4117647059rem;
+    text-align: center;
+    background-color: #fff; }
+  .welcome-view .left-together .we-share-categories {
+    background-color: #fff;
+    color: #eee; }
+.welcome-view .right-together {
+  display: grid;
+  grid-template-rows: minmax(3.5294117647rem, 9.4117647059rem) 18.8235294118rem;
+  grid-gap: 2vh; }
+  .welcome-view .right-together .side-tasks {
+    grid-row: 1;
+    background-color: #fff; }
+  .welcome-view .right-together .ad {
+    grid-row: 2;
+    background-color: #fff; }
 
 /*.fas {
 	.fa-rocket {

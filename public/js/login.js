@@ -3,7 +3,7 @@
 $(document).ready(function() {
 	// body...
 	// Initialize Firebase
-	var config1 = {
+	var config = {
 		apiKey: "AIzaSyB4OkQ7YqMHIvsFop93jME2TQoJAainsBQ",
 	    authDomain: "together-cb.firebaseapp.com",
 	    databaseURL: "https://together-cb.firebaseio.com",
@@ -11,7 +11,7 @@ $(document).ready(function() {
 	    storageBucket: "together-cb.appspot.com",
 	    messagingSenderId: "631052340251"
 	};
-	firebase.initializeApp(config1);
+	firebase.initializeApp(config);
 
 	// Get elements
 	const emailInput = document.getElementById('email-input');
@@ -109,17 +109,8 @@ $(document).ready(function() {
 	//   // console.log('Image URL: ' + profile.getImageUrl());
 	//   // console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 	// }
-
-// 	<a href="#" onclick="signOut();">Sign out</a>
-// <script>
-//   function signOut() {
-//     var auth2 = gapi.auth2.getAuthInstance();
-//     auth2.signOut().then(function () {
-//       console.log('User signed out.');
-//     });
-//   }
-// </script>
-
+	
+	
 });
 
 function loadUser(user) {

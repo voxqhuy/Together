@@ -2,6 +2,7 @@
 	@extend %together-page;
 	.together-content {
 		width: 100%;
+		min-height: 100vh;
 		.we-share-post {
 			@include rem('padding', 12px);
 			background-color: $lighter-purple;
@@ -56,15 +57,38 @@
 			}
 			#attach-img-post {
 			}
-
+		}
+	}
+	.left-together {
+		display: grid;
+		grid-template-rows: pxToRem(160px) minmax(pxToRem(36px), pxToRem(240px));
+		grid-gap: 2vh;
+		.side-user {
+			@include rem('height', 160px);
+			@include rem('line-height', 160px);
+			text-align: center;
+			background-color: $white;
+		}
+		.we-share-categories {
+			background-color: $white;
+			color: $off-white1;
+		}
+	}
+	.right-together {
+		display: grid;
+		grid-template-rows: minmax(pxToRem(60px), pxToRem(160px)) pxToRem(320px);
+		grid-gap: 2vh;
+		.side-tasks {
+			grid-row: 1;
+			background-color: $white;
+		}
+		.ad {
+			grid-row: 2;
+			background-color: $white;
 		}
 	}
 }
 
-.welcome-side {
-	height: 100%;
-	background-color: white;
-}
 
 /*.fas {
 	.fa-rocket {
