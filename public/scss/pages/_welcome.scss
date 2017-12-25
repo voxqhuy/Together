@@ -3,18 +3,15 @@
 	.together-content {
 		width: 100%;
 		min-height: 100vh;
+		textarea {
+			width: 100%;
+			resize: none;
+			border: none;
+			@include rem('border-radius', 4px);
+		}
 		.we-share-post {
-			/* TODO MAKE SASS IN JS @include rem('padding', 12px);*/
-			padding: 12px;
+			@include rem('padding', 12px);
 			background-color: $lighter-purple;
-			margin-bottom: 36px;
-			textarea {
-				width: 100%;
-				resize: none;
-				border: none;
-				border-radius: 4px;
-				/*TODO @include rem('border-radius', 4px);*/
-			}
 			.post-topic {
 				border-bottom: 1px solid $lighter-grey;
 			}
@@ -60,11 +57,9 @@
 			}
 		}
 		.we-share-news {
-			margin-top: 36px;
-			padding-top: 36px;
+			margin-top: 12px;
 			.we-share-new {
-				/* TODO @include rem('padding', 12px);*/
-				padding: 12px;
+				@include rem('padding', 12px);
 				background-color: $white;
 			}
 		}

@@ -1,5 +1,7 @@
 "use strict";
 
+let dbRefPosts;
+
 let hasTopic = false;
 let hasDescription = false;
 let launchBtn;
@@ -15,6 +17,19 @@ $(document).ready(function() {
         messagingSenderId: "631052340251"
     };
     firebase.initializeApp(config);
+
+    // Create firebase database references 
+    dbRefPosts = firebase.database().ref().child('posts');
+    const dbRefTopic = dbRefPosts.child('topic');
+    const dbRefDescription = dbRefPosts.child('description');
+
+    // Sync challenges changes
+    dbRefPosts.on('value', snap => console.log(snap.val()));
+
+    // Sync topic and description changes
+
+    // load posts
+    loadPosts(dbRefPosts);
 
     // get elements
     const postingTopic = document.getElementById("we-share-topic");
@@ -48,33 +63,19 @@ $(document).ready(function() {
     }, false);
     // launch a new post
     launchBtn.onclick = function() {addNewPost(postingTopic.value, postingDescription.value)};
-
-    // Create firebase database references 
-    const dbRefChallenges = firebase.database().ref().child('posts');
-    const dbRefTopic = dbRefChallenges.child('topic');
-    const dbRefDescription = dbRefChallenges.child('description');
-
-    // Sync challenges changes
-    dbRefChallenges.on('value', snap => console.log(snap.val()));
-
-    // Sync topic and description changes
-
 });
 
-function enableLaunchButton() {
-    if (hasTopic && hasDescription) {
-        launchBtn.style.pointerEvents = 'auto';
-        console.log('enable');
-    } else {
-        launchBtn.style.pointerEvents = 'none';
-        console.log('disabled');
-    }
+
+// LOAD POSTS FUNCTION
+function loadPosts(dbRefChallenges) {
+    console.log('a');
 }
 
 function test() {
     console.log('abc');
 }
 
+// MANAGE POSTS FUNCTIONS
 function addNewPost(topic, description) {
   // A post entry.
   var postData = {
@@ -83,7 +84,7 @@ function addNewPost(topic, description) {
   };
 
   // Get a key for a new Post.
-  var newPostKey = firebase.database().ref().child('posts').push().key;
+  var newPostKey = dbRefPosts.push().key;
 
   // Write the new post's data simultaneously in the posts list and the user's post list.
   var updates = {};
@@ -103,7 +104,6 @@ function writeNewPost(topic, description) {
     newTopic.value = topic;
     newDescription.value = description;
 
-    // var newDescriptioinContent = document.createTextNode(topic); 
     // add the text node to the newly created div
     newDiv.appendChild(newTopic);  
     newDiv.appendChild(newDescription); 
@@ -118,16 +118,27 @@ function writeNewPost(topic, description) {
 }
 
 function styleNewPost(div, topic, description) {
-    div.style.padding = "12px";
-    div.style.backgroundColor = "#fff";
-    topic.style.width = "100%";
-    description.style.width = "100%";
-    topic.style.resize = "none";
-    description.style.resize = "none";
-    topic.style.border = "none";
-    description.style.border = "none";
-    topic.style.borderRadius = "4px";
-    description.style.borderRadius = "4px";
+    // div.style.padding = "12px";
+    // div.style.backgroundColor = "#fff";
+    // topic.style.width = "100%";
+    // description.style.width = "100%";
+    // topic.style.resize = "none";
+    // description.style.resize = "none";
+    // topic.style.border = "none";
+    // description.style.border = "none";
+    div.style.borderBottom = "1px solid #e6e6e6";
+}
+
+
+// ENABLE LAUNCH BUTTON IF TEXTS ARE VALID
+function enableLaunchButton() {
+    if (hasTopic && hasDescription) {
+        launchBtn.style.pointerEvents = 'auto';
+        console.log('enable');
+    } else {
+        launchBtn.style.pointerEvents = 'none';
+        console.log('disabled');
+    }
 }
 
 

@@ -145,48 +145,6 @@ body {
       grid-column: col-start / span 14;
       grid-row: 3; }
 
-/*nav {	
-	background: transparent;
-	.navbar-brand {
-		padding-left: 10%;
-	}
-	.login-signup-nav {
-		padding-right: 10%;
-		li {
-			a {
-				width: 80px;
-				text-align: center;
-				color: $white !important;
-				background-color: transparent;
-				border: 1px solid $off-white1;
-				margin: 5px;
-				&:hover {
-					color: $black !important;
-					background-color: $white;
-				}
-				&.disabled {
-					background-color: $dark-purple;
-					color: $lighter-grey !important;
-				}
-			}
-		}
-		.main-nav {
-			li {
-				&:nth-child(3) {
-					border-right: 1px solid $lighter-grey;
-				};
-			}
-		}
-		.welcome-nav {
-			padding-right: 10%;
-			li {
-				&:nth-child(1) {
-					border-right: 1px solid $lighter-grey;
-				};
-			}
-		}
-	}
-}*/
 .account-nav {
   display: grid;
   grid-template-columns: 1fr 6fr 6fr 1fr;
@@ -336,17 +294,22 @@ body {
 .welcome-view .together-content {
   width: 100%;
   min-height: 100vh; }
+  .welcome-view .together-content textarea {
+    width: 100%;
+    resize: none;
+    border: none;
+    /*Convert the baseline into rems*/
+    /*Print the first line in pixel values*/
+    border-radius: 4px;
+    /*If there is only one (numeric) value, return the property/value line for it.*/
+    border-radius: 0.2352941176rem; }
   .welcome-view .together-content .we-share-post {
-    /* TODO MAKE SASS IN JS @include rem('padding', 12px);*/
+    /*Convert the baseline into rems*/
+    /*Print the first line in pixel values*/
     padding: 12px;
-    background-color: #dccddc;
-    margin-bottom: 36px; }
-    .welcome-view .together-content .we-share-post textarea {
-      width: 100%;
-      resize: none;
-      border: none;
-      border-radius: 4px;
-      /*TODO @include rem('border-radius', 4px);*/ }
+    /*If there is only one (numeric) value, return the property/value line for it.*/
+    padding: 0.7058823529rem;
+    background-color: #dccddc; }
     .welcome-view .together-content .we-share-post .post-topic {
       border-bottom: 1px solid #ddd; }
     .welcome-view .together-content .we-share-post .post-controls {
@@ -404,11 +367,13 @@ body {
             outline: 1px dotted #000;
             outline: -webkit-focus-ring-color auto 5px; }
   .welcome-view .together-content .we-share-news {
-    margin-top: 36px;
-    padding-top: 36px; }
+    margin-top: 12px; }
     .welcome-view .together-content .we-share-news .we-share-new {
-      /* TODO @include rem('padding', 12px);*/
+      /*Convert the baseline into rems*/
+      /*Print the first line in pixel values*/
       padding: 12px;
+      /*If there is only one (numeric) value, return the property/value line for it.*/
+      padding: 0.7058823529rem;
       background-color: #fff; }
 .welcome-view .left-together {
   display: grid;
