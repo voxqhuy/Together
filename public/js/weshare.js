@@ -1,7 +1,10 @@
 "use strict";
 
+let hasTopic = false;
+let hasDescription = false;
+let launchBtn;
+
 $(document).ready(function() {
-    // body...
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyB4OkQ7YqMHIvsFop93jME2TQoJAainsBQ",
@@ -13,8 +16,120 @@ $(document).ready(function() {
     };
     firebase.initializeApp(config);
 
+    // get elements
+    const postingTopic = document.getElementById("we-share-topic");
+    const postingDescription = document.getElementById("we-share-description");
+    launchBtn = document.getElementById("launch-btn");
+    // disable the launch until there's a valid text
+    launchBtn.style.pointerEvents = 'none';
+
+    // events handlers buttons
+    // check if the topic is valid
+    postingTopic.addEventListener('input', function() {
+        if (postingTopic.value.trim() == '') {
+            hasTopic = false;
+        } else {
+            hasTopic = true;
+        }
+        if (launchBtn != null) {
+            enableLaunchButton();
+        }
+    }, false);
+    // check if the description is valid
+    postingDescription.addEventListener('input', function() {
+        if (postingDescription.value.trim() == '') {
+            hasDescription = false;
+        } else {
+            hasDescription = true;
+        }
+        if (launchBtn != null) {
+            enableLaunchButton();
+        }
+    }, false);
+    // launch a new post
+    launchBtn.onclick = function() {addNewPost(postingTopic.value, postingDescription.value)};
+
+    // Create firebase database references 
+    const dbRefChallenges = firebase.database().ref().child('posts');
+    const dbRefTopic = dbRefChallenges.child('topic');
+    const dbRefDescription = dbRefChallenges.child('description');
+
+    // Sync challenges changes
+    dbRefChallenges.on('value', snap => console.log(snap.val()));
+
+    // Sync topic and description changes
 
 });
+
+function enableLaunchButton() {
+    if (hasTopic && hasDescription) {
+        launchBtn.style.pointerEvents = 'auto';
+        console.log('enable');
+    } else {
+        launchBtn.style.pointerEvents = 'none';
+        console.log('disabled');
+    }
+}
+
+function test() {
+    console.log('abc');
+}
+
+function addNewPost(topic, description) {
+  // A post entry.
+  var postData = {
+    topic: topic,
+    description: description
+  };
+
+  // Get a key for a new Post.
+  var newPostKey = firebase.database().ref().child('posts').push().key;
+
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+  var updates = {};
+  updates['/posts/' + newPostKey] = postData;
+  writeNewPost(topic, description);
+  return firebase.database().ref().update(updates);
+}
+
+function writeNewPost(topic, description) {
+    // create a new div element 
+    var newDiv = document.createElement("div"); 
+    newDiv.className = "we-share-new";
+    var newTopic = document.createElement("textarea");
+    var newDescription = document.createElement("textarea");
+    // and give them the contents
+    // var newTopicContent = document.createTextNode(topic); 
+    newTopic.value = topic;
+    newDescription.value = description;
+
+    // var newDescriptioinContent = document.createTextNode(topic); 
+    // add the text node to the newly created div
+    newDiv.appendChild(newTopic);  
+    newDiv.appendChild(newDescription); 
+    styleNewPost(newDiv, newTopic, newDescription);
+    // add the newly created element and its content into the DOM 
+    // Get a reference to the element in which we want to insert a new node
+    var parentElement = document.getElementById('news-placeholder');
+    // Get a reference to the first child
+    var theFirstChild = parentElement.firstChild;
+    // Insert the new element before the first child
+    parentElement.insertBefore(newDiv, theFirstChild);
+}
+
+function styleNewPost(div, topic, description) {
+    div.style.padding = "12px";
+    div.style.backgroundColor = "#fff";
+    topic.style.width = "100%";
+    description.style.width = "100%";
+    topic.style.resize = "none";
+    description.style.resize = "none";
+    topic.style.border = "none";
+    description.style.border = "none";
+    topic.style.borderRadius = "4px";
+    description.style.borderRadius = "4px";
+}
+
 
 (function ($) {
     //

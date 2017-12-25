@@ -1,0 +1,32 @@
+[debug] [2017-12-25T21:58:21.963Z] ----------------------------------------------------------------------
+[debug] [2017-12-25T21:58:21.967Z] Command:       D:\Working\Nodejs\node.exe C:\Users\Skyz\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only functions,hosting
+[debug] [2017-12-25T21:58:21.967Z] CLI Version:   3.16.0
+[debug] [2017-12-25T21:58:21.967Z] Platform:      win32
+[debug] [2017-12-25T21:58:21.967Z] Node Version:  v9.2.0
+[debug] [2017-12-25T21:58:21.968Z] Time:          Mon Dec 25 2017 16:58:21 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-25T21:58:21.968Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-12-25T21:58:21.986Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-12-25T21:58:21.987Z] > authorizing via signed-in user
+[debug] [2017-12-25T21:58:21.992Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/together-cb  
+  
+ Mon Dec 25 2017 16:58:21 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-25T21:58:22.465Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-25T21:58:22.468Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/together-cb/tokens  
+  
+ Mon Dec 25 2017 16:58:22 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-25T21:58:22.882Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'd:\iRoommm\Web dev\Github copies\Together'...
+[info] 
+[debug] [2017-12-25T21:58:22.895Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/together-cb  
+  
+ Mon Dec 25 2017 16:58:22 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-25T21:58:23.228Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-25T21:58:23.230Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/631052340251/clients/_:getWebAppConfig  
+  
+ Mon Dec 25 2017 16:58:23 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-25T21:58:23.606Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+

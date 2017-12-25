@@ -4,14 +4,16 @@
 		width: 100%;
 		min-height: 100vh;
 		.we-share-post {
-			@include rem('padding', 12px);
+			/* TODO MAKE SASS IN JS @include rem('padding', 12px);*/
+			padding: 12px;
 			background-color: $lighter-purple;
-
+			margin-bottom: 36px;
 			textarea {
 				width: 100%;
 				resize: none;
 				border: none;
-				@include rem('border-radius', 4px);
+				border-radius: 4px;
+				/*TODO @include rem('border-radius', 4px);*/
 			}
 			.post-topic {
 				border-bottom: 1px solid $lighter-grey;
@@ -29,8 +31,7 @@
 					background-color: $dark-purple;
 					cursor: pointer;
 					text-align: center;
-					float: right;
-					
+					float: right;	
 				}
 				.image-upload {
 					height: 100%;
@@ -58,20 +59,33 @@
 			#attach-img-post {
 			}
 		}
+		.we-share-news {
+			margin-top: 36px;
+			padding-top: 36px;
+			.we-share-new {
+				/* TODO @include rem('padding', 12px);*/
+				padding: 12px;
+				background-color: $white;
+			}
+		}
 	}
 	.left-together {
 		display: grid;
 		grid-template-rows: pxToRem(160px) minmax(pxToRem(36px), pxToRem(240px));
 		grid-gap: 2vh;
 		.side-user {
+			grid-row: 1;
 			@include rem('height', 160px);
 			@include rem('line-height', 160px);
 			text-align: center;
-			background-color: $white;
+			color: $yellow;
+			background-color: $dark-purple;
 		}
 		.we-share-categories {
+			grid-row: 2;
 			background-color: $white;
 			color: $off-white1;
+			background-color: $dark-purple;
 		}
 	}
 	.right-together {
@@ -80,11 +94,16 @@
 		grid-gap: 2vh;
 		.side-tasks {
 			grid-row: 1;
-			background-color: $white;
+			@include rem('height', 160px);
+			@include rem('line-height', 160px);
+			text-align: center;
+			color: $yellow;
+			background-color: $dark-purple;
 		}
 		.ad {
 			grid-row: 2;
 			background-color: $white;
+			background-color: $dark-purple;
 		}
 	}
 }

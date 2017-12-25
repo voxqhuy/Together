@@ -337,21 +337,16 @@ body {
   width: 100%;
   min-height: 100vh; }
   .welcome-view .together-content .we-share-post {
-    /*Convert the baseline into rems*/
-    /*Print the first line in pixel values*/
+    /* TODO MAKE SASS IN JS @include rem('padding', 12px);*/
     padding: 12px;
-    /*If there is only one (numeric) value, return the property/value line for it.*/
-    padding: 0.7058823529rem;
-    background-color: #dccddc; }
+    background-color: #dccddc;
+    margin-bottom: 36px; }
     .welcome-view .together-content .we-share-post textarea {
       width: 100%;
       resize: none;
       border: none;
-      /*Convert the baseline into rems*/
-      /*Print the first line in pixel values*/
       border-radius: 4px;
-      /*If there is only one (numeric) value, return the property/value line for it.*/
-      border-radius: 0.2352941176rem; }
+      /*TODO @include rem('border-radius', 4px);*/ }
     .welcome-view .together-content .we-share-post .post-topic {
       border-bottom: 1px solid #ddd; }
     .welcome-view .together-content .we-share-post .post-controls {
@@ -408,11 +403,19 @@ body {
           .welcome-view .together-content .we-share-post .post-controls .image-upload .inputfile:focus + label {
             outline: 1px dotted #000;
             outline: -webkit-focus-ring-color auto 5px; }
+  .welcome-view .together-content .we-share-news {
+    margin-top: 36px;
+    padding-top: 36px; }
+    .welcome-view .together-content .we-share-news .we-share-new {
+      /* TODO @include rem('padding', 12px);*/
+      padding: 12px;
+      background-color: #fff; }
 .welcome-view .left-together {
   display: grid;
   grid-template-rows: 9.4117647059rem minmax(2.1176470588rem, 14.1176470588rem);
   grid-gap: 2vh; }
   .welcome-view .left-together .side-user {
+    grid-row: 1;
     /*Convert the baseline into rems*/
     /*Print the first line in pixel values*/
     height: 160px;
@@ -424,20 +427,36 @@ body {
     /*If there is only one (numeric) value, return the property/value line for it.*/
     line-height: 9.4117647059rem;
     text-align: center;
-    background-color: #fff; }
+    color: #ffc107;
+    background-color: #694377; }
   .welcome-view .left-together .we-share-categories {
+    grid-row: 2;
     background-color: #fff;
-    color: #eee; }
+    color: #eee;
+    background-color: #694377; }
 .welcome-view .right-together {
   display: grid;
   grid-template-rows: minmax(3.5294117647rem, 9.4117647059rem) 18.8235294118rem;
   grid-gap: 2vh; }
   .welcome-view .right-together .side-tasks {
     grid-row: 1;
-    background-color: #fff; }
+    /*Convert the baseline into rems*/
+    /*Print the first line in pixel values*/
+    height: 160px;
+    /*If there is only one (numeric) value, return the property/value line for it.*/
+    height: 9.4117647059rem;
+    /*Convert the baseline into rems*/
+    /*Print the first line in pixel values*/
+    line-height: 160px;
+    /*If there is only one (numeric) value, return the property/value line for it.*/
+    line-height: 9.4117647059rem;
+    text-align: center;
+    color: #ffc107;
+    background-color: #694377; }
   .welcome-view .right-together .ad {
     grid-row: 2;
-    background-color: #fff; }
+    background-color: #fff;
+    background-color: #694377; }
 
 /*.fas {
 	.fa-rocket {
