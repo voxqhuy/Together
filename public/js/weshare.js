@@ -140,7 +140,7 @@ function writeNewPost(topic, description) {
 }
 
 function styleNewPost(div, topic, description) {
-    // div.style.padding = "12px";
+    div.style.marginBottom = "8px";
     // div.style.backgroundColor = "#fff";
     // topic.style.width = "100%";
     // description.style.width = "100%";
@@ -149,7 +149,14 @@ function styleNewPost(div, topic, description) {
     // topic.style.border = "none";
     // description.style.border = "none";
     div.style.borderBottom = "1px solid #e6e6e6";
-    topic.style.textAlign = "center";
+    topic.style.fontWeight = "bold";
+    topic.style.fontFamily = "Open Sans, sans-serif";
+    description.style.fontFamily = "Open Sans, sans-serif";
+    topic.readOnly = true;
+    description.readOnly = true;
+    topic.style.cursor = "default";
+    description.style.cursor = "default";
+    description.rows = "5";
 }
 
 
@@ -161,7 +168,6 @@ function enableLaunchButton() {
         launchBtn.style.pointerEvents = 'none';
     }
 }
-
 
 (function ($) {
     //

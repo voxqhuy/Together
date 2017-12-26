@@ -5,7 +5,6 @@
 		min-height: 100vh;
 		textarea {
 			width: 100%;
-			resize: none;
 			border: none;
 			@include rem('border-radius', 4px);
 		}
