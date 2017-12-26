@@ -1,10 +1,14 @@
 "use strict";
 
 let dbRefPosts;
+let dbRefPostsIds;
+let dbRefTotalIds;
+let ids = [];
 
 let hasTopic = false;
 let hasDescription = false;
 let launchBtn;
+
 
 $(document).ready(function() {
     // Initialize Firebase
@@ -19,17 +23,26 @@ $(document).ready(function() {
     firebase.initializeApp(config);
 
     // Create firebase database references 
-    dbRefPosts = firebase.database().ref().child('posts');
+    const dbRef = firebase.database().ref();
+    dbRefPosts = dbRef.child('posts');
+    dbRefPostsIds = dbRef.child('ids');
+    dbRefTotalIds = dbRef.child('totalIds');
     const dbRefTopic = dbRefPosts.child('topic');
     const dbRefDescription = dbRefPosts.child('description');
 
     // Sync challenges changes
-    dbRefPosts.on('value', snap => console.log(snap.val()));
+    dbRefPostsIds.once('value', snap => { 
+        var numIds = snap.numChildren();
+        for (var i = 0; i < numIds; i++) {
+            ids.push(snap.child('' + i).val());
+        }
+        // load posts
+        loadPosts();
+    });
+
+    // dbRefPosts.on('value', snap => console.log(snap.val()));
 
     // Sync topic and description changes
-
-    // load posts
-    loadPosts(dbRefPosts);
 
     // get elements
     const postingTopic = document.getElementById("we-share-topic");
@@ -71,26 +84,27 @@ function loadPosts(dbRefChallenges) {
     console.log('a');
 }
 
-function test() {
-    console.log('abc');
-}
-
 // MANAGE POSTS FUNCTIONS
 function addNewPost(topic, description) {
-  // A post entry.
-  var postData = {
+    // A post entry.
+    var postData = {
     topic: topic,
     description: description
-  };
+    };
 
-  // Get a key for a new Post.
-  var newPostKey = dbRefPosts.push().key;
+    // Get a key for a new Post.
+    var newPostKey = dbRefPosts.push().key;
 
-  // Write the new post's data simultaneously in the posts list and the user's post list.
-  var updates = {};
-  updates['/posts/' + newPostKey] = postData;
-  writeNewPost(topic, description);
-  return firebase.database().ref().update(updates);
+    // Write the new post's data simultaneously in the posts list and the user's post list.
+    var updates = {};
+    updates['/posts/' + newPostKey] = postData;
+
+    // add a new id
+    ids.push(newPostKey);
+    dbRefPostsIds.set(ids);    
+
+    writeNewPost(topic, description);
+    return firebase.database().ref().update(updates);
 }
 
 function writeNewPost(topic, description) {
