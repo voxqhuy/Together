@@ -86,6 +86,14 @@
 	}
 }
 
+%fixed-top-main-nav {
+	background-color: $white;
+	border-bottom: 1px solid $lighter-grey;
+	position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
 %login-nav-height {
 	margin: 4vh 0 0 0;
 	line-height: 6vh;

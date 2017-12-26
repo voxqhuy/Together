@@ -46,8 +46,7 @@
 .together-nav {
 	display: grid;
 	grid-template-columns: 1fr 12fr 1fr;
-	background-color: $white;
-	border-bottom: 1px solid $lighter-grey;
+	@extend %fixed-top-main-nav;
 	@extend %main-nav-height;
 	.center-nav {
 		

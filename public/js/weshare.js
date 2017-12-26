@@ -10,6 +10,9 @@ let hasTopic = false;
 let hasDescription = false;
 let launchBtn;
 
+let postingTopic;
+let postingDescription;
+
 
 $(document).ready(function() {
     // Initialize Firebase
@@ -48,8 +51,8 @@ $(document).ready(function() {
     // Sync topic and description changes
 
     // get elements
-    const postingTopic = document.getElementById("we-share-topic");
-    const postingDescription = document.getElementById("we-share-description");
+    postingTopic = document.getElementById("we-share-topic");
+    postingDescription = document.getElementById("we-share-description");
     launchBtn = document.getElementById("launch-btn");
     // disable the launch until there's a valid text
     launchBtn.style.pointerEvents = 'none';
@@ -78,7 +81,10 @@ $(document).ready(function() {
         }
     }, false);
     // launch a new post
-    launchBtn.onclick = function() {addNewPost(postingTopic.value, postingDescription.value)};
+    launchBtn.onclick = function() {
+        addNewPost(postingTopic.value, postingDescription.value);
+        clearTextareas();
+    };
 });
 
 
@@ -156,7 +162,7 @@ function styleNewPost(div, topic, description) {
     description.readOnly = true;
     topic.style.cursor = "default";
     description.style.cursor = "default";
-    description.rows = "5";
+    description.rows = "4";
 }
 
 
@@ -167,6 +173,12 @@ function enableLaunchButton() {
     } else {
         launchBtn.style.pointerEvents = 'none';
     }
+}
+
+// Clear text areas
+function clearTextareas() {
+    postingTopic.value = "";
+    postingDescription.value = "";
 }
 
 (function ($) {

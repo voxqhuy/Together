@@ -66,6 +66,16 @@
   .login-view .login-content .login-form .account-input #btn-login:hover, .login-view .login-content .signup-form .account-input #btn-login:hover, .login-view .login-content .forgotpw-form .account-input #btn-login:hover, .login-view .login-content .login-form .account-input #btn-signup:hover, .login-view .login-content .signup-form .account-input #btn-signup:hover, .login-view .login-content .forgotpw-form .account-input #btn-signup:hover, .login-view .login-content .login-form .account-input #btn-forgotpw:hover, .login-view .login-content .signup-form .account-input #btn-forgotpw:hover, .login-view .login-content .forgotpw-form .account-input #btn-forgotpw:hover {
     background-color: #666; }
 
+.together-nav {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  /* Set the navbar to fixed position */
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  /* Full width */ }
+
 .account-nav .logo, .account-nav .login-signup-btn {
   margin: 4vh 0 0 0;
   line-height: 6vh;
@@ -186,9 +196,7 @@ body {
 
 .together-nav {
   display: grid;
-  grid-template-columns: 1fr 12fr 1fr;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd; }
+  grid-template-columns: 1fr 12fr 1fr; }
   .together-nav .center-nav {
     grid-column: 2; }
     .together-nav .center-nav .left-nav {
@@ -296,7 +304,6 @@ body {
   min-height: 100vh; }
   .welcome-view .together-content textarea {
     width: 100%;
-    resize: none;
     border: none;
     /*Convert the baseline into rems*/
     /*Print the first line in pixel values*/
