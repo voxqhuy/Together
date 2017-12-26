@@ -1,9 +1,10 @@
 "use strict";
 
 let dbRefPosts;
-let dbRefPostsIds;
-let dbRefTotalIds;
-let ids = [];
+// let dbRefPostsIds;
+// let dbRefTotalIds;
+// let ids = [];
+var posts = new Object();
 
 let hasTopic = false;
 let hasDescription = false;
@@ -25,22 +26,24 @@ $(document).ready(function() {
     // Create firebase database references 
     const dbRef = firebase.database().ref();
     dbRefPosts = dbRef.child('posts');
-    dbRefPostsIds = dbRef.child('ids');
-    dbRefTotalIds = dbRef.child('totalIds');
+    // dbRefPostsIds = dbRef.child('ids');
+    // dbRefTotalIds = dbRef.child('totalIds');
     const dbRefTopic = dbRefPosts.child('topic');
     const dbRefDescription = dbRefPosts.child('description');
 
     // Sync challenges changes
-    dbRefPostsIds.once('value', snap => { 
-        var numIds = snap.numChildren();
-        for (var i = 0; i < numIds; i++) {
-            ids.push(snap.child('' + i).val());
-        }
+    // dbRefPostsIds.once('value', snap => { 
+    //     var numIds = snap.numChildren();
+    //     for (var i = 0; i < numIds; i++) {
+    //         ids.push(snap.child('' + i).val());
+    //     }
+    // });
+
+    dbRefPosts.once('value', snap => {
+        posts = Object.assign({}, snap.val()); 
         // load posts
         loadPosts();
     });
-
-    // dbRefPosts.on('value', snap => console.log(snap.val()));
 
     // Sync topic and description changes
 
@@ -80,8 +83,13 @@ $(document).ready(function() {
 
 
 // LOAD POSTS FUNCTION
-function loadPosts(dbRefChallenges) {
-    console.log('a');
+function loadPosts() {
+    for(const id in posts) {
+        if(posts.hasOwnProperty(id)) {
+            var post = posts[id];
+            writeNewPost(post['topic'], post['description']);
+        }
+    }
 }
 
 // MANAGE POSTS FUNCTIONS
@@ -100,8 +108,8 @@ function addNewPost(topic, description) {
     updates['/posts/' + newPostKey] = postData;
 
     // add a new id
-    ids.push(newPostKey);
-    dbRefPostsIds.set(ids);    
+    // ids.push(newPostKey);
+    // dbRefPostsIds.set(ids);    
 
     writeNewPost(topic, description);
     return firebase.database().ref().update(updates);
@@ -141,6 +149,7 @@ function styleNewPost(div, topic, description) {
     // topic.style.border = "none";
     // description.style.border = "none";
     div.style.borderBottom = "1px solid #e6e6e6";
+    topic.style.textAlign = "center";
 }
 
 
@@ -148,10 +157,8 @@ function styleNewPost(div, topic, description) {
 function enableLaunchButton() {
     if (hasTopic && hasDescription) {
         launchBtn.style.pointerEvents = 'auto';
-        console.log('enable');
     } else {
         launchBtn.style.pointerEvents = 'none';
-        console.log('disabled');
     }
 }
 
