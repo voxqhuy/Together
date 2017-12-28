@@ -6,13 +6,16 @@
 		textarea {
 			width: 100%;
 			border: none;
-			@include rem('border-radius', 4px);
+			@include rem('border-radius', 6px);
 		}
 		.we-share-post {
 			@include rem('padding', 12px);
 			background-color: $lighter-purple;
 			.post-topic {
 				border-bottom: 1px solid $lighter-grey;
+			}
+			#attach-img {
+				@include rem('border-radius', 6px);
 			}
 			.post-controls {
 				@include rem('height', 36px);
@@ -27,28 +30,30 @@
 					background-color: $dark-purple;
 					cursor: pointer;
 					text-align: center;
-					float: right;	
+					float: right;
 				}
 				.image-upload {
-					height: 100%;
 					display: inline-block;
-					@include rem('width', 36px);
+					@include rem('width', 84px);
 					.inputfile {
 						display: none;
 						+ label {
-						    height: 100%;
-						    @include rem('line-height', 36px);
 						    justify-content: center;
-						    color: white;
+						    color: $white;
 						    display: inline-block;
 						    cursor: pointer;
 						}
-						&:focus {
+/*						&:focus {
 							+ label {
 								outline: 1px dotted #000;
 								outline: -webkit-focus-ring-color auto 5px;
 							}
-						}
+						}*/
+					}
+					#clear-img-btn {
+						display: inline-block;
+						color: $white;
+						cursor: pointer;
 					}
 				}
 			}

@@ -45,17 +45,18 @@
     </div>
     <div class="center-content together-content">
       <div class="we-share-post">
-        <textarea id="we-share-topic" class="post-topic" rows="2" placeholder="What is the challenge?"></textarea>
-        <textarea id="we-share-description" rows="5" placeholder="Describe the challenge here..."></textarea>
+        <textarea id="we-share-topic" class="post-topic" rows="2" placeholder="  What is the challenge?"></textarea>
+        <textarea id="we-share-description" rows="5" placeholder="  Describe the challenge here..."></textarea>
 <!--         <img src="" width="" ="200" alt="Image preview..."> -->
+        <img id="attach-img" src="" height="160" alt="Image preview...">
         <div class="post-controls">
+          <form class="image-upload">
+            <input id="attach-img-post" class="inputfile" type="file" accept="image/*" onchange="previewImg()">
+            <label for="attach-img-post"><i class="fas fa-image fa-2x"></i></label>
+            <div id="clear-img-btn"><i class="fas fa-times fa-2x"></i></div>
+          </form>
           <div id="launch-btn" class="submit-post-btn">
             <i class="fas fa-rocket"></i>  Launch!
-          </div>
-          
-          <div class="image-upload">
-            <input type="file" id="attach-img-post" class="inputfile" accept="image/*" />
-            <label for="attach-img-post"><i class="fas fa-image fa-2x"></i></label>
           </div>
         </div>
       </div>

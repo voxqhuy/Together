@@ -8,10 +8,14 @@ var posts = new Object();
 
 let hasTopic = false;
 let hasDescription = false;
-let launchBtn;
 
+// posting views
 let postingTopic;
 let postingDescription;
+let uploadImgForm;
+let attachedImg;
+let clearImgBtn;
+let launchBtn;
 
 
 $(document).ready(function() {
@@ -56,8 +60,15 @@ $(document).ready(function() {
     launchBtn = document.getElementById("launch-btn");
     // disable the launch until there's a valid text
     launchBtn.style.pointerEvents = 'none';
+    uploadImgForm = document.forms[0].elements;
+    attachedImg = document.getElementById('attach-img');
+    // hide the image preview until the user attachs something
+    attachedImg.style.display = "none";
+    clearImgBtn = document.getElementById('clear-img-btn');
+    // hide the clear image button until the user attachs something
+    clearImgBtn.style.display = "none";
 
-    // events handlers buttons
+    // EVENT HANDLERS
     // check if the topic is valid
     postingTopic.addEventListener('input', function() {
         if (postingTopic.value.trim() == '') {
@@ -84,6 +95,10 @@ $(document).ready(function() {
     launchBtn.onclick = function() {
         addNewPost(postingTopic.value, postingDescription.value);
         clearTextareas();
+    };
+    // clear attach image
+    clearImgBtn.onclick = function(){
+      clearInputFile(uploadImgForm[0]);
     };
 });
 
@@ -147,13 +162,6 @@ function writeNewPost(topic, description) {
 
 function styleNewPost(div, topic, description) {
     div.style.marginBottom = "8px";
-    // div.style.backgroundColor = "#fff";
-    // topic.style.width = "100%";
-    // description.style.width = "100%";
-    // topic.style.resize = "none";
-    // description.style.resize = "none";
-    // topic.style.border = "none";
-    // description.style.border = "none";
     div.style.borderBottom = "1px solid #e6e6e6";
     topic.style.fontWeight = "bold";
     topic.style.fontFamily = "Open Sans, sans-serif";
@@ -180,6 +188,60 @@ function clearTextareas() {
     postingTopic.value = "";
     postingDescription.value = "";
 }
+
+// Show image preview
+function previewImg() {
+  
+  var imgInput = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+
+  reader.onloadend = function () {
+    attachedImg.src = reader.result;
+  }
+
+  if (imgInput) {
+    reader.readAsDataURL(imgInput);
+    if (attachedImg.style.display === "none") {
+        attachedImg.style.display = "block";
+
+    }
+    if (clearImgBtn.style.display === "none") {
+        clearImgBtn.style.display = "inline-block";
+    }
+  } else {
+    attachedImg.src = "#";
+    attachedImg.style.display = "none";
+    clearImgBtn.style.display = "none";
+  }
+}
+
+// clear attached image
+function clearInputFile(f){
+  if(f.value){
+    try{
+      f.value = ''; //for IE11, latest Chrome/Firefox/Opera...
+      attachedImg.src = "#";
+      attachedImg.style.display = "none";
+      clearImgBtn.style.display = "none";
+    }catch(err){
+    }
+    if(f.value){ //for IE5 ~ IE10
+      var form = document.createElement('form'), ref = f.nextSibling;
+      form.appendChild(f);
+      form.reset();
+      ref.parentNode.insertBefore(f,ref);
+      attachedImg.src = "#";
+      attachedImg.style.display = "none";
+      clearImgBtn.style.display = "none";
+    }
+  }
+}
+
+
+
+
+
+// SNOWING BG
 
 (function ($) {
     //
