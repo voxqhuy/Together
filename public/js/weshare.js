@@ -202,7 +202,7 @@ function previewImg() {
   if (imgInput) {
     reader.readAsDataURL(imgInput);
     if (attachedImg.style.display === "none") {
-        attachedImg.style.display = "block";
+        attachedImg.style.display = "inline-block";
 
     }
     if (clearImgBtn.style.display === "none") {

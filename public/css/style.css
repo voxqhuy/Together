@@ -319,12 +319,17 @@ body {
     background-color: #dccddc; }
     .welcome-view .together-content .we-share-post .post-topic {
       border-bottom: 1px solid #ddd; }
-    .welcome-view .together-content .we-share-post #attach-img {
+    .welcome-view .together-content .we-share-post #img-preview #attach-img {
+      display: inline-block;
       /*Convert the baseline into rems*/
       /*Print the first line in pixel values*/
       border-radius: 6px;
       /*If there is only one (numeric) value, return the property/value line for it.*/
       border-radius: 0.3529411765rem; }
+    .welcome-view .together-content .we-share-post #img-preview #clear-img-btn {
+      display: inline-block;
+      color: #fff;
+      cursor: pointer; }
     .welcome-view .together-content .we-share-post .post-controls {
       /*Convert the baseline into rems*/
       /*Print the first line in pixel values*/
@@ -375,10 +380,6 @@ body {
             color: #fff;
             display: inline-block;
             cursor: pointer; }
-        .welcome-view .together-content .we-share-post .post-controls .image-upload #clear-img-btn {
-          display: inline-block;
-          color: #fff;
-          cursor: pointer; }
   .welcome-view .together-content .we-share-news {
     margin-top: 12px; }
     .welcome-view .together-content .we-share-news .we-share-new {
