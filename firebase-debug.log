@@ -1,0 +1,41 @@
+[debug] [2017-12-28T04:50:10.092Z] ----------------------------------------------------------------------
+[debug] [2017-12-28T04:50:10.138Z] Command:       D:\Working\Nodejs\node.exe C:\Users\Skyz\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only functions,hosting
+[debug] [2017-12-28T04:50:10.139Z] CLI Version:   3.16.0
+[debug] [2017-12-28T04:50:10.139Z] Platform:      win32
+[debug] [2017-12-28T04:50:10.139Z] Node Version:  v9.2.0
+[debug] [2017-12-28T04:50:10.149Z] Time:          Wed Dec 27 2017 23:50:10 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-28T04:50:10.149Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-12-28T04:50:10.257Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-12-28T04:50:10.257Z] > authorizing via signed-in user
+[debug] [2017-12-28T04:50:10.260Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-12-28T04:50:10.261Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/z8fc1eCEe337l2eVCsedTY2q0xhHwCqLl944ajuUafw',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Dec 27 2017 23:50:10 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-28T04:50:10.817Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-28T04:50:11.032Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/together-cb  
+  
+ Wed Dec 27 2017 23:50:11 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-28T04:50:11.679Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-28T04:50:11.680Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/together-cb/tokens  
+  
+ Wed Dec 27 2017 23:50:11 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-28T04:50:12.291Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'd:\iRoommm\Web dev\Github copies\Together'...
+[info] 
+[debug] [2017-12-28T04:50:12.725Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/together-cb  
+  
+ Wed Dec 27 2017 23:50:12 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-28T04:50:13.059Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-28T04:50:13.061Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/631052340251/clients/_:getWebAppConfig  
+  
+ Wed Dec 27 2017 23:50:13 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-28T04:50:13.536Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
